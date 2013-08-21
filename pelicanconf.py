@@ -32,3 +32,6 @@ THEME = "theme"
 
 PLUGIN_PATH = "../pelican-plugins"
 PLUGINS = ['assets']
+
+GOOGLE_ANALYTICS = 'UA-43317972-1'
+DISQUS_SITENAME = 'danaag'

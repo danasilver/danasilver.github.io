@@ -12,12 +12,11 @@
     <link rel="stylesheet" href="{{ SITE_URL }}/{{ ASSET_URL }}">
 {% endassets %}
 
-  <link rel="shortcut icon" type="image/png" href="{{ GRAVATAR }}" />
+  <link rel="shortcut icon" type="image/png" href="{{ SITE_URL }}/theme/imgs/favicon.ico" />
   {% block head %}{% endblock %}
 </head>
 <body>
 <header class="main-header">
-  {% include 'github.html' %}
   <hgroup>
     <div>
       <img src="{{ GRAVATAR }}" style="margin-left: 34px; margin-top: 30px;">
@@ -45,8 +44,6 @@
       <li><a href="mailto:{{ CONTACT }}?subject=Hello" id="contact-link">Contact</a></li>
     </ul>
   </nav>
-  <a href="http://pelican.notmyidea.org" class="fork-me">Powered by Pelican.</a>
-
 </header>
 {% block main_section %}{% endblock %}
 <div class="mobile-nav">
@@ -60,12 +57,12 @@
   </h3>
 </div>
 
-{% assets filters="rjsmin", output="gen/packed.js", "js/libs/jquery-1.7.2.min.js", "js/libs/jquery.url.js", "js/libs/bootstrap-modal.js", "js/libs/handlebars.js", "js/libs/spin.min.js", "js/libs/moment.min.js", "js/common.js", "js/libs/github.js", "js/libs/google+.js", "js/libs/twitter.js", "js/libs/instagram.js" %}
+{% assets filters="rjsmin", output="gen/packed.js", "js/libs/jquery-1.7.2.min.js", "js/libs/jquery.url.js", "js/libs/handlebars.js", "js/libs/moment.min.js", "js/common.js" %}
 <script src="{{ SITE_URL }}/{{ ASSET_URL }}"></script>
 {% endassets %}
 
 <script>
-    // Function to get the Maximam value in Array
+    // Function to get the Maximum value in Array
     Array.max = function( array ) {
         return Math.max.apply( Math, array );
     };
@@ -100,5 +97,4 @@
 </script>
 
 {% include "analytics.html" %}
-{% include "piwik.html" %}
 </body>
