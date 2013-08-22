@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/Users/dsilver/Documents/git_repos/dana.ag",
+      "folder_exclude_patterns": ["_site"]
+		}
+	]
+}

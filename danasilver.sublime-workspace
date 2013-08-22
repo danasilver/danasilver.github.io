@@ -1,0 +1,1284 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"de",
+				"description"
+			],
+			[
+				"listi",
+				"listings_no_links"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"stri",
+				"stripped-text"
+			],
+			[
+				"message",
+				"message_dict"
+			],
+			[
+				"pro",
+				"process_new_cl_message_task"
+			],
+			[
+				"by",
+				"buyer_email"
+			],
+			[
+				"buyer",
+				"buyer_email"
+			],
+			[
+				"listing",
+				"listing_view_link"
+			],
+			[
+				"listin",
+				"listings_no_links"
+			],
+			[
+				"cl_",
+				"CL_view"
+			],
+			[
+				"cl",
+				"CL_view"
+			],
+			[
+				"view_",
+				"view_page_text"
+			],
+			[
+				"update",
+				"update_url"
+			],
+			[
+				"msg_",
+				"msg_body"
+			],
+			[
+				"body",
+				"body-plain"
+			],
+			[
+				"new_",
+				"new_cl_admin_message_task"
+			],
+			[
+				"require",
+				"require_POST"
+			],
+			[
+				"msg",
+				"msg_dict"
+			],
+			[
+				"Listing",
+				"ListingForm"
+			],
+			[
+				"Inte",
+				"IntegrityError"
+			],
+			[
+				"clean",
+				"cleaned_data"
+			],
+			[
+				"uni",
+				"unique_title_validator"
+			],
+			[
+				"vali",
+				"validate_user_unique_title"
+			],
+			[
+				"User",
+				"UserUniqueCharField"
+			],
+			[
+				"att",
+				"AttributeError"
+			],
+			[
+				"acti",
+				"activate_link"
+			],
+			[
+				"phone",
+				"phone_page_text"
+			],
+			[
+				"get",
+				"geturl"
+			],
+			[
+				"anon_",
+				"cl_anon_autopost_task"
+			],
+			[
+				"auto",
+				"autopost_cxt"
+			],
+			[
+				"prevent",
+				"preventDefault"
+			],
+			[
+				"keyboar",
+				"keyboard-shortcuts-modal"
+			],
+			[
+				"das",
+				"dashboard-delete-permanent"
+			],
+			[
+				"ds",
+				"dashboard-refresh"
+			],
+			[
+				"search",
+				"search"
+			],
+			[
+				"messa",
+				"messageFormWrapper"
+			],
+			[
+				"message-form",
+				"message-form-wrapper"
+			],
+			[
+				"pre",
+				"prevListing"
+			],
+			[
+				"scroll",
+				"scrollTo"
+			],
+			[
+				"next",
+				"nextBuyer"
+			],
+			[
+				"curre",
+				"currentSelectedListing"
+			],
+			[
+				"current",
+				"currentSelectedListing"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"dashboard",
+				"dashboard-delete-permanent"
+			],
+			[
+				"filter",
+				"filter-deleted"
+			],
+			[
+				"curret",
+				"currentFilterButton"
+			],
+			[
+				"resp",
+				"response_dict"
+			],
+			[
+				"status",
+				"status_dict"
+			],
+			[
+				"stat",
+				"status_dict"
+			],
+			[
+				"dashbo",
+				"dashboard-delete"
+			],
+			[
+				"result",
+				"result_list"
+			],
+			[
+				"test",
+				"test_list"
+			],
+			[
+				"over",
+				"override_settings"
+			],
+			[
+				"res",
+				"result_list_with_tz_support"
+			],
+			[
+				"conte",
+				"content_type"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"existing",
+				"existing_email"
+			],
+			[
+				"messages",
+				"messages-body"
+			],
+			[
+				"prev",
+				"prevBuyer"
+			],
+			[
+				"c",
+				"currentSelectedBuyer"
+			],
+			[
+				"reu",
+				"require_GET"
+			],
+			[
+				"Http",
+				"HttpResponse"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"data-",
+				"data-listing-id"
+			],
+			[
+				"unread",
+				"unreadMessages"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"padding",
+				"padding-right"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/syntax.css",
+			"settings":
+			{
+				"buffer_size": 3738,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/main.css",
+			"settings":
+			{
+				"buffer_size": 2572,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/post.html",
+			"settings":
+			{
+				"buffer_size": 144,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_layouts/default.html",
+			"settings":
+			{
+				"buffer_size": 1318,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_config.yml",
+			"settings":
+			{
+				"buffer_size": 53,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Strapdown.js Markdown: Preview in a browser"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"strap",
+				"Strapdown.js Markdown: Preview in a browser"
+			],
+			[
+				"stra",
+				"Strapdown.js Markdown: Preview in Sublime Text"
+			],
+			[
+				"git",
+				"GitHub Flavored Markdown: Preview"
+			],
+			[
+				"r",
+				"Package Control: Remove Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"synda",
+				"Set Syntax: HTML (Django)"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/mail/views.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/settings/development.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/utils.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/views.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/tasks.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/mail/tasks.py",
+		"/Users/dsilver/Documents/git_repos/dana.ag/theme/templates/article.html",
+		"/Users/dsilver/Documents/git_repos/dana.ag/theme/templates/base.html",
+		"/Users/dsilver/Documents/git_repos/dana.ag/theme/static/css/styles.css",
+		"/Users/dsilver/Documents/git_repos/dana.ag/pelicanconf.py",
+		"/Users/dsilver/Documents/git_repos/dana.ag/.gitignore",
+		"/Users/dsilver/Documents/git_repos/dana.ag/theme/static/imgs/ico-resharers.png",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/models.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/settings/production.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/settings/common.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/forms.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/registration/models.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/registration/forms.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/listings/cl_description.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/static/listings/js/dashboard.js",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/registration/backends/default/__init__.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/fixtures/initial_data.yaml",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/registration/__init__.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/mail/urls.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/users/decorators.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/users/models.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/firstvisit.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/users/views.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/users/forms.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/registration/views.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/registration/tasks.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/listings/dashboard.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/marginless.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/static/listings/less/listings.less",
+		"/Users/dsilver/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/rocket_registration/activation_email.html",
+		"/Users/dsilver/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/listings/partials/edit.html",
+		"/Users/dsilver/Documents/git_repos/Hermes/testdata/anon_create.json",
+		"/Users/dsilver/Documents/git_repos/Hermes/app.py",
+		"/Users/dsilver/Documents/git_repos/Hermes/jobs.py",
+		"/Users/dsilver/Downloads/autopost_functions.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/listings/partials/dashboard_sidebar.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/listings/partials/buyers_panel.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/listings/partials/messages_panel.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/templatetags/danatime.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/listings/partials/listings_panel.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/static/rocket/less/base.less",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/fixtures/messages_demo.yaml",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/tests.py",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/templatetags/danatime.py",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/.gitignore",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/README.md",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/danatime.py",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/LICENSE",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/dana-time.py",
+		"/Users/dsilver/Documents/git_repos/django-dana-time/gmail-time.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/static/users/js/users.js",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/static/users/less/users.less",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/users/info.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/__init__.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/.gitignore",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/static_pages/urls.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/registration/auth_urls.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/rocket_registration/registration_form.html",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/listings/urls.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/static/listings/js/listings_dashboard.js",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/apps/users/migrations/0002_auto__del_userrating__add_field_usercomment_rating.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/manage.py",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/README.md",
+		"/Users/dsilver/Library/Application Support/Sublime Text 3/Packages/Markdown Preview/MarkdownPreview.sublime-settings",
+		"/Users/dsilver/Library/Application Support/Sublime Text 3/Packages/User/MarkdownPreview.sublime-settings",
+		"/Users/dsilver/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/dsilver/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/dsilver/Documents/git_repos/Rocket-Listings-Django/rocket/templates/partials/header_fixed.html",
+		"/Users/dsilver/Library/Application Support/Sublime Text 3/Packages/User/Default ().sublime-keymap"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"celery_always",
+			"Listing",
+			".js",
+			"b.png",
+			"favicon",
+			"bootstrap",
+			"piwik",
+			"piwik.html",
+			"google_plusone.html",
+			"github.html",
+			"Listing",
+			"print",
+			"password",
+			"delete",
+			"DEFAULT_FROM",
+			"DEFAULT",
+			"DEFAULT_FROM_EMAIL",
+			"DEFAULT",
+			"listing",
+			"create_inactive_user",
+			"send_activation_email",
+			"print",
+			"import USER",
+			"mail.views.autopost",
+			"redirect",
+			"render",
+			"ListingPhoto",
+			"Buyer",
+			"Message",
+			"User",
+			"Offer",
+			"render",
+			"mailgun",
+			"Message",
+			"Buyer",
+			"Listing",
+			"settings",
+			"@require",
+			"FirstVisit",
+			"cleaned_data",
+			"settings",
+			"rocketlistings.mailgun.org",
+			"mail.rocketlistings.com",
+			"settings",
+			"S3_URL",
+			"cl_dealer",
+			"cl_dealer_id",
+			"cl_owner_id",
+			"registration_register",
+			"settings",
+			".\n",
+			"code",
+			"data",
+			"  </div>",
+			"<div id",
+			"</a",
+			"<a",
+			"span",
+			"status: Deleted",
+			"status: Sold",
+			"status: Pending",
+			"status: 2",
+			"status: Draft",
+			"status: Active",
+			"Active",
+			"datetime",
+			"tester",
+			"connected",
+			"compress",
+			"COMPRESS_OFFLINE",
+			"clean_username",
+			"print",
+			"auto",
+			"listing-col",
+			"buyer-card",
+			"buyer",
+			"buyer-card",
+			"FAF5AF",
+			"listings_dashboard.js",
+			"BooleanField",
+			"appliances"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"cl_dealer_id",
+			"cl_owner_id",
+			"cl_dealer",
+			"span",
+			"  </a>",
+			"<a id",
+			"</div",
+			"<div",
+			"div",
+			"status: 5",
+			"status: 4",
+			"status: 2",
+			"status: 1",
+			"status: 2",
+			"status: 3",
+			"buyer"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/syntax.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3738,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "css/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_layouts/post.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_layouts/default.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "_config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 53,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 114.0
+	},
+	"project": "danasilver.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"con",
+				"_config.yml"
+			],
+			[
+				"defa",
+				"_layouts/default.html"
+			],
+			[
+				"post",
+				"_layouts/post.html"
+			],
+			[
+				"main",
+				"css/main.css"
+			],
+			[
+				"synta",
+				"css/syntax.css"
+			],
+			[
+				"uti",
+				"rocket/apps/listings/utils.py"
+			],
+			[
+				"listingtasks",
+				"rocket/apps/listings/tasks.py"
+			],
+			[
+				"listingview",
+				"rocket/apps/listings/views.py"
+			],
+			[
+				"deve",
+				"rocket/settings/development.py"
+			],
+			[
+				"mailviews",
+				"rocket/apps/mail/views.py"
+			],
+			[
+				"mailtasks",
+				"rocket/apps/mail/tasks.py"
+			],
+			[
+				"devel",
+				"rocket/settings/development.py"
+			],
+			[
+				"base",
+				"theme/templates/base.html"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"listingmodel",
+				"rocket/apps/listings/models.py"
+			],
+			[
+				"listingstasks",
+				"rocket/apps/listings/tasks.py"
+			],
+			[
+				"de",
+				"rocket/settings/development.py"
+			],
+			[
+				"prod",
+				"rocket/settings/production.py"
+			],
+			[
+				"common",
+				"rocket/settings/common.py"
+			],
+			[
+				"listingviews",
+				"rocket/apps/listings/views.py"
+			],
+			[
+				"listingforms",
+				"rocket/apps/listings/forms.py"
+			],
+			[
+				"registrationmodel",
+				"rocket/apps/registration/models.py"
+			],
+			[
+				"dasj",
+				"rocket/static/listings/js/dashboard.js"
+			],
+			[
+				"listingutils",
+				"rocket/apps/listings/utils.py"
+			],
+			[
+				"production",
+				"rocket/settings/production.py"
+			],
+			[
+				"cl_",
+				"rocket/templates/listings/cl_description.html"
+			],
+			[
+				"utils",
+				"rocket/apps/listings/utils.py"
+			],
+			[
+				"pro",
+				"rocket/settings/production.py"
+			],
+			[
+				"model",
+				"rocket/apps/listings/models.py"
+			],
+			[
+				"das",
+				"rocket/static/listings/js/dashboard.js"
+			],
+			[
+				"initial",
+				"rocket/apps/listings/fixtures/initial_data.yaml"
+			],
+			[
+				"default",
+				"rocket/apps/registration/backends/default/__init__.py"
+			],
+			[
+				"registrationinit",
+				"rocket/apps/registration/__init__.py"
+			],
+			[
+				"listingtaks",
+				"rocket/apps/listings/tasks.py"
+			],
+			[
+				"dev",
+				"rocket/settings/development.py"
+			],
+			[
+				"dec",
+				"rocket/apps/users/decorators.py"
+			],
+			[
+				"usermodels",
+				"rocket/apps/users/models.py"
+			],
+			[
+				"usersview",
+				"rocket/apps/users/views.py"
+			],
+			[
+				"userforms",
+				"rocket/apps/users/forms.py"
+			],
+			[
+				"mailurls",
+				"rocket/apps/mail/urls.py"
+			],
+			[
+				"comm",
+				"rocket/settings/common.py"
+			],
+			[
+				"develop",
+				"rocket/settings/development.py"
+			],
+			[
+				"usermod",
+				"rocket/apps/users/models.py"
+			],
+			[
+				"registrationviews",
+				"rocket/apps/registration/views.py"
+			],
+			[
+				"registrationtasks",
+				"rocket/apps/registration/tasks.py"
+			],
+			[
+				"listingsviews",
+				"rocket/apps/listings/views.py"
+			],
+			[
+				"dashboard",
+				"rocket/templates/listings/dashboard.html"
+			],
+			[
+				"mar",
+				"rocket/templates/marginless.html"
+			],
+			[
+				"lsitingsles",
+				"rocket/static/listings/less/listings.less"
+			],
+			[
+				"acti",
+				"rocket/templates/rocket_registration/activation_email.html"
+			],
+			[
+				"listingedit",
+				"rocket/templates/listings/partials/edit.html"
+			],
+			[
+				"jo",
+				"jobs.py"
+			],
+			[
+				"app",
+				"app.py"
+			],
+			[
+				"mailtas",
+				"rocket/apps/mail/tasks.py"
+			],
+			[
+				"side",
+				"rocket/templates/listings/partials/dashboard_sidebar.html"
+			],
+			[
+				"buyers",
+				"rocket/templates/listings/partials/buyers_panel.html"
+			],
+			[
+				"danatime",
+				"rocket/apps/listings/templatetags/danatime.py"
+			],
+			[
+				"messages",
+				"rocket/templates/listings/partials/messages_panel.html"
+			],
+			[
+				"listings.less",
+				"rocket/static/listings/less/listings.less"
+			],
+			[
+				"listingpanel",
+				"rocket/templates/listings/partials/listings_panel.html"
+			],
+			[
+				"listingurls",
+				"rocket/apps/listings/urls.py"
+			],
+			[
+				"listingpane",
+				"rocket/templates/listings/partials/listings_panel.html"
+			],
+			[
+				"listings",
+				"rocket/static/listings/less/listings.less"
+			],
+			[
+				"",
+				".gitignore"
+			],
+			[
+				"dana",
+				"templatetags/danatime.py"
+			],
+			[
+				"rea",
+				"README.md"
+			],
+			[
+				"lice",
+				"LICENSE"
+			],
+			[
+				"da",
+				"danatime.py"
+			],
+			[
+				"listingspanel",
+				"rocket/templates/listings/partials/listings_panel.html"
+			],
+			[
+				"dashboard_side",
+				"rocket/templates/listings/partials/dashboard_sidebar.html"
+			],
+			[
+				"dash",
+				"rocket/templates/listings/dashboard.html"
+			],
+			[
+				"users.js",
+				"rocket/static/users/js/users.js"
+			],
+			[
+				"users.les",
+				"rocket/static/users/less/users.less"
+			],
+			[
+				"product",
+				"rocket/settings/production.py"
+			],
+			[
+				"registform",
+				"rocket/apps/registration/forms.py"
+			],
+			[
+				"info",
+				"rocket/templates/users/info.html"
+			],
+			[
+				"edit",
+				"rocket/templates/listings/partials/edit.html"
+			],
+			[
+				"registrationforms",
+				"rocket/apps/registration/forms.py"
+			],
+			[
+				"registrationmode",
+				"rocket/apps/registration/models.py"
+			],
+			[
+				"staticpagesurl",
+				"rocket/apps/static_pages/urls.py"
+			],
+			[
+				"authur",
+				"rocket/apps/registration/auth_urls.py"
+			],
+			[
+				"listingform",
+				"rocket/apps/listings/forms.py"
+			],
+			[
+				"userfor",
+				"rocket/apps/users/forms.py"
+			],
+			[
+				"usersviews",
+				"rocket/apps/users/views.py"
+			],
+			[
+				"register",
+				"rocket/templates/rocket_registration/registration_form.html"
+			],
+			[
+				"usermodel",
+				"rocket/apps/users/models.py"
+			],
+			[
+				"messag",
+				"rocket/templates/listings/partials/messages_panel.html"
+			],
+			[
+				"mesa",
+				"rocket/apps/listings/fixtures/messages_demo.yaml"
+			],
+			[
+				"vie",
+				"rocket/apps/listings/views.py"
+			],
+			[
+				"listingurl",
+				"rocket/apps/listings/urls.py"
+			],
+			[
+				"mailtask",
+				"rocket/apps/mail/tasks.py"
+			],
+			[
+				"dashb",
+				"rocket/static/listings/js/dashboard.js"
+			],
+			[
+				"listingvies",
+				"rocket/apps/listings/views.py"
+			],
+			[
+				"listingpan",
+				"rocket/templates/listings/partials/listings_panel.html"
+			],
+			[
+				"buyer",
+				"rocket/templates/listings/partials/buyers_panel.html"
+			],
+			[
+				"message",
+				"rocket/templates/listings/partials/messages_panel.html"
+			],
+			[
+				"listingles",
+				"rocket/static/listings/less/listings.less"
+			],
+			[
+				"listings.les",
+				"rocket/static/listings/less/listings.less"
+			],
+			[
+				"listingdash",
+				"rocket/static/listings/js/listings_dashboard.js"
+			],
+			[
+				"dashboarjs",
+				"rocket/static/listings/js/listings_dashboard.js"
+			],
+			[
+				"forms",
+				"rocket/apps/listings/forms.py"
+			],
+			[
+				"modelsuser",
+				"rocket/apps/users/migrations/0002_auto__del_userrating__add_field_usercomment_rating.py"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"users.lse",
+				"rocket/static/users/less/users.less"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
