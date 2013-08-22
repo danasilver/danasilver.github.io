@@ -8,7 +8,7 @@
   <title>{% block title %}{{SITENAME}}{% endblock %}</title>
   <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-{% assets filters="cssmin", output="css/styles.min.css", "css/styles.css", "css/pygments.css" %}
+{% assets filters="cssmin", output="css/normalize.css", "css/pygments.css" %}
     <link rel="stylesheet" href="{{ SITE_URL }}/{{ ASSET_URL }}">
 {% endassets %}
 
@@ -57,7 +57,7 @@
   </h3>
 </div>
 
-{% assets filters="rjsmin", output="gen/packed.js", "js/libs/jquery-1.7.2.min.js", "js/libs/jquery.url.js", "js/libs/handlebars.js", "js/libs/moment.min.js", "js/common.js" %}
+{% assets filters="rjsmin", output="gen/packed.js" %}
 <script src="{{ SITE_URL }}/{{ ASSET_URL }}"></script>
 {% endassets %}
 
