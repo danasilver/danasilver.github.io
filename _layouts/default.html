@@ -5,42 +5,27 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
-
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="icon" type="image/png" href="static/imgs/favicon.ico">
+        <link rel="stylesheet" href="static/css/syntax.css">
+        <link rel="stylesheet" href="static/css/ag.css">
 
     </head>
     <body>
-
+      <div class="header">
         <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
-
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /container -->
-
+          <span class="site-name">dana.<span id="ag">ag</span><span id="silver">silver</span></span>
+          <span class="navigation">
+            <span class="nav bits"><a href="#">Bits</a></span>
+            <span class="nav projects"><a href="#">Projects</a></span>
+            <span class="nav about"><a href="#">About</a></span>
+            <span class="nav resume"><a href="#">Resume</a></span>
+          </span>
+        </div>
+      </div>
+      <div class="content">
+        <div class="container">
+          {{ content }}
+        </div>
+      </div>
     </body>
 </html>

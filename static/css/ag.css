@@ -1,0 +1,95 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen:300);
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #FFF;
+  font: 13.34px Helvetica, Arial, sans-serif;
+  font-size: small;
+  color: #333;
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+h1 {
+  margin-bottom: 1em;
+}
+p {
+  margin: 1em 0;
+}
+a {
+  color: #00a;
+}
+a:hover {
+  color: #000;
+}
+.container {
+  margin: auto;
+  width: 48em;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #E5E5E5;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 300;
+  line-height: 50px;
+  border-bottom: 1px solid #b2b2b2;
+  overflow: hidden;
+  z-index: 9999;
+}
+.header .site-name {
+  font-size: 30px;
+}
+.header .site-name #ag {
+  position: absolute;
+  transition: 0.3s top;
+}
+.header .site-name #silver {
+  position: absolute;
+  top: 50px;
+  transition: top 0.3s;
+}
+.header .site-name:hover #ag {
+  top: -50px;
+  transition: 0.3s top;
+}
+.header .site-name:hover #silver {
+  top: 0px;
+  transition: top 0.3s;
+}
+.header .navigation {
+  float: right;
+}
+.header .navigation .nav {
+  padding: 0 3px;
+}
+.header .navigation .nav a {
+  color: #333;
+  text-decoration: none;
+}
+.header .navigation .nav a:hover {
+  text-decoration: underline;
+}
+.content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
