@@ -1,3 +1,4 @@
 name: Dana Silver
 markdown: redcarpet
 pygments: true
+exclude: ['less', '.gitignore', '*.sublime-*', 'README.md']
