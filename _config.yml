@@ -2,3 +2,5 @@ name: Dana Silver
 markdown: redcarpet
 pygments: true
 exclude: ['less', '.gitignore', '*.sublime-*', 'README.md']
+
+splash_imgs: ['/static/imgs/splash/bikeburl.jpg', '/static/imgs/splash/bikeburl@2x.jpg']
