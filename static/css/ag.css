@@ -95,9 +95,17 @@ a:hover {
 }
 .splash {
   overflow: hidden;
+  position: relative;
+  height: 500px;
 }
-.splash .hide {
-  display: none;
+.splash img {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.splash img.hide {
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .home {
   margin-top: 25px;
