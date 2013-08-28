@@ -8,7 +8,7 @@
         <link rel="icon" type="image/png" href="/static/imgs/favicon.ico">
         <link rel="stylesheet" href="/static/css/syntax.css">
         <link rel="stylesheet" href="/static/css/ag.css">
-        {% if page.url == "/index.html" %}
+        {% if page.url == "/" %}
           <script src="/static/js/splash.js"></script>
         {% endif %}
         <script>
@@ -25,7 +25,6 @@
       {% include header.html %}
       <div class="content">
         <div class="container">
-          {% include splash.html %}
           {{ content }}
         </div>
       </div>
