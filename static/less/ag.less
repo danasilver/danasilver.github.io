@@ -192,6 +192,12 @@ a { color: darken(@link-color, 10%); }
           background-color: @article-shade-color;
         }
       }
+      img {
+        max-width: 840px;
+        @media (max-width: @mobile-width-limit) {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -229,6 +235,7 @@ a { color: darken(@link-color, 10%); }
   position: relative;
   height: 200px;
   box-shadow: inset 0 5px 5px #333;
+  text-align: center;
   img {
     display: block;
     margin: auto;
