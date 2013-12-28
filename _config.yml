@@ -1,6 +1,8 @@
 name: Dana Silver
 markdown: redcarpet
 pygments: true
+pygments_options: ['lineanchors', 'linenos']
+
 exclude: ['less', '.gitignore', '*.sublime-*', 'README.md']
 
 permalink: pretty

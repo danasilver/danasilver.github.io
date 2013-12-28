@@ -28,15 +28,14 @@ var Splash = {
   },
   addClass: function(id, _class) {
     el = document.getElementById(id);
-    if (!el.className.match(/(?:^|\s)_class(?!\S)/)) {
-      el.className += " ";
-      el.className += _class;
+    if (!el.classList.contains(_class)) {
+      el.classList.add(_class);
     }
   },
   removeClass: function(id, _class) {
     el = document.getElementById(id);
-    if (el.className.indexOf(_class) > -1) {
-      el.className = el.className.replace(_class, '');
+    if (el.classList.contains(_class)) {
+      el.classList.remove(_class);
     }
   },
   handleKeys: function(event) {

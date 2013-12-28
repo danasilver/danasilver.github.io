@@ -7,7 +7,7 @@ title: Dana Silver
 <div class="home">
   <ul class="posts">
     {% for post in site.posts limit:10 %}
-      <li><a class="title" href="{{ post.url }}">{{ post.title }}</a><span class="date">{{ post.date | date: "%b %d, %Y"}}</span></li>
+      <a href="{{ post.url }}"><li><span class="title">{{ post.title }}</span><span class="date">{{ post.date | date: "%b %d, %Y"}}</span></li></a>
     {% endfor %}
   </ul>
 </div>
