@@ -5,12 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
-        <link rel="icon" type="image/png" href="/static/imgs/favicon.ico">
+        <link rel="icon" type="image/png" href="/static/imgs/favicon2.ico">
         <link rel="stylesheet" href="/static/css/syntax_github.css">
         <link rel="stylesheet" href="/static/css/ag.css">
-        {% if page.url == "/" %}
-          <script src="/static/js/splash.js"></script>
-        {% endif %}
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,7 +16,7 @@
 
           ga('create', 'UA-43317972-1', 'dana.ag');
           ga('send', 'pageview');
-      </script>
+        </script>
     </head>
     <body>
       {% include header.html %}
@@ -38,5 +35,7 @@
           </div>
         </div>
       </div>
+      <script src="/static/js/main.js"></script>
+      {% if page.url == "/" %}<script src="/static/js/splash.js"></script>{% endif %}
     </body>
 </html>

@@ -9,6 +9,32 @@
   background-image: -o-linear-gradient(left, @startColor, @endColor);
 }
 
+@mobile-width: 600px;
+@mobile-width-limit: (@mobile-width - 1);
+@header-color: #E5E5E5;
+@article-shade-color: lighten(@header-color, 5%);
+@link-color: #0086B3;
+
+@font-size-base:          14px;
+@font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+
+@line-height-base:        1.428571429; // 20/14
+
+@headings-font-weight: 500;
+@headings-line-height: 1.1;
+
+/*******************************
+*          NORMALIZE           *
+********************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +44,7 @@ html, body { height: 100%; }
 
 body {
   background-color: #FFF;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
 }
 
@@ -26,12 +52,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
 }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
+a { color: darken(@link-color, 10%); }
+
 
 .container {
   margin: auto;
-  width: 840px;
+  @media (min-width: 840px) {
+    width: 840px;
+  }
 }
 
 /*******************************
@@ -39,20 +67,69 @@ a:hover   { color: #000; }
 ********************************/
 .header {
   height: 50px;
-  background-color: #E5E5E5;
+  width: 100%;
+  background-color: @header-color;
   font-family: "Oxygen", sans-serif;
   font-weight: 300;
-  line-height: 50px;
-  border-bottom: 1px solid darken(#E5E5E5, 20%);
+  border-bottom: 1px solid darken(@header-color, 20%);
   .site-name {
     font-size: 30px;
     color: #333;
     text-decoration: none;
+    line-height: 50px;
+    @media (max-width: 840px) {
+      padding-left: 5px;
+    }
   }
-  .navigation {
+  .navigation-main {
+    @media (max-width: @mobile-width-limit) {
+      display: none;
+    }
     float: right;
+    line-height: 50px;
     .nav {
       padding: 0 3px;
+      &:last-child {
+        padding: 0 3px 0 3px;
+      }
+      a {
+        color: #333;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  #navigation-mobile {
+    float: right;
+    line-height: 50px;
+    cursor: pointer;
+    padding-right: 15px;
+    @media (min-width: @mobile-width) {
+      display: none;
+    }
+  }
+  #navigation-mobile-dropdown {
+    width: 100%;
+    position: fixed;
+    background-color: @header-color;
+    z-index: 999;
+    @media (min-width: @mobile-width) {
+      display: none;
+    }
+    @media (max-width: 840px) {
+      padding-right: 5px;
+    }
+    &.hide {
+      display: none;
+    }
+    .nav {
+      text-align: right;
+      padding: 10px 25px 10px 3px;
+      &:last-child {
+        border-bottom: 1px solid darken(@header-color, 20%);
+      }
       a {
         color: #333;
         text-decoration: none;
@@ -68,10 +145,52 @@ a:hover   { color: #000; }
   *            POSTS             *
   ********************************/
   article {
-    header {
-      h1 {
-        font-family: "Oxygen", sans-serif;
-        font-size: 26px;
+    p, h1, h2, h3, h4, h5, h6, pre, ul, ol, table {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 840px) {
+      padding: 0 5px;
+    }
+    header, .post {
+      font-size: @font-size-base;
+      line-height: @line-height-base;
+      p code {
+          font-size: 90%;
+          background-color: lighten(@link-color, 60%);
+          padding: 2px 4px;
+          color: @link-color;
+          border-radius: 3px;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        line-height: @headings-line-height;
+        font-weight: @headings-font-weight;
+        margin-top: 20px;
+      }
+      h1 { font-size: @font-size-h1; }
+      h2 { font-size: @font-size-h2; }
+      h3 { font-size: @font-size-h3; }
+      h4 { font-size: @font-size-h4; }
+      h5 { font-size: @font-size-h5; }
+      h6 { font-size: @font-size-h6; }
+      code, pre {
+        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      }
+      blockquote {
+        padding-left: 20px;
+        border-left: 3px @article-shade-color solid;
+      }
+      ul, ol {
+        padding-left: 40px;
+      }
+      table {
+        border-collapse: collapse;
+        th, td {
+          border: 1px solid #d9d9d9;
+          padding: 6px 13px;
+        }
+        tr:nth-child(2n) {
+          background-color: @article-shade-color;
+        }
       }
     }
   }
@@ -80,12 +199,14 @@ a:hover   { color: #000; }
   *            FOOTER            *
   ********************************/
   .footer {
+    padding: 5px 0;
     .line {
       height: 1px;
       .horizontal-gradient(#999, #FFF);
     }
     .links {
-      padding-top: 10px;
+      font-family: "Oxygen", sans-serif;
+      padding-top: 5px;
       li {
         list-style: none;
         display: inline-block;
@@ -109,6 +230,8 @@ a:hover   { color: #000; }
   height: 200px;
   box-shadow: inset 0 5px 5px #333;
   img {
+    display: block;
+    margin: auto;
     position: absolute;
     opacity: 1;
     transition: opacity 0.3s;
@@ -139,10 +262,12 @@ a:hover   { color: #000; }
       .date {
         float: right;
         padding-right: 10px;
+        @media (max-width: @mobile-width-limit) {
+          display: none;
+        }
       }
       &:hover {
-        color: #00a;
-        background-color: #E5E5E5;
+        background-color: @header-color;
         transition: background-color 0.25s;
       }
     }
@@ -161,22 +286,21 @@ pre {
   background-color: #ffffff;
   padding: 0;
   line-height: 18px;
-  margin-bottom: 30px;
   white-space: pre;
   overflow-x: auto;
   word-break: inherit;
   word-wrap: inherit;
-  font-size: 12px;
+  font-size: 12px !important;
   a::before {
     content: counter(line-numbering);
     counter-increment: line-numbering;
     padding-right: 1em;
     width: 25px;
-    text-align: center;
+    text-align: right;
     opacity: 0.7;
     display: inline-block;
-    color: #aaa;
-    background: #eee;
+    color: #777;
+    background: @article-shade-color;
     margin-right: 16px;
     padding: 2px 10px;
     font-size: 12px;

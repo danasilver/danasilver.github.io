@@ -2,41 +2,31 @@ var Splash = {
   imgs: document.getElementsByClassName("splash-img"),
   currentImgIndex: 0,
   init: function() {
+    var splashElem = document.getElementsByClassName("splash")[0];
     document.addEventListener("keydown", Splash.handleKeys, false);
+    splashElem.addEventListener("click", Splash.nextImg, false);
   },
   nextImg: function() {
     var imgs = Splash.imgs;
-    Splash.addClass(imgs[Splash.currentImgIndex].id, "hide");
+    addClass(imgs[Splash.currentImgIndex], "hide");
     if (imgs[Splash.currentImgIndex] != imgs[imgs.length - 1]) {
       Splash.currentImgIndex ++;
     }
     else {
       Splash.currentImgIndex = 0;
     }
-    Splash.removeClass(imgs[Splash.currentImgIndex].id, "hide");
+    removeClass(imgs[Splash.currentImgIndex], "hide");
   },
   prevImg: function() {
     var imgs = Splash.imgs;
-    Splash.addClass(imgs[Splash.currentImgIndex].id, "hide");
+    addClass(imgs[Splash.currentImgIndex], "hide");
     if (imgs[Splash.currentImgIndex] != imgs[0]) {
       Splash.currentImgIndex --;
     }
     else {
       Splash.currentImgIndex = imgs.length - 1;
     }
-    Splash.removeClass(imgs[Splash.currentImgIndex].id, "hide");
-  },
-  addClass: function(id, _class) {
-    el = document.getElementById(id);
-    if (!el.classList.contains(_class)) {
-      el.classList.add(_class);
-    }
-  },
-  removeClass: function(id, _class) {
-    el = document.getElementById(id);
-    if (el.classList.contains(_class)) {
-      el.classList.remove(_class);
-    }
+    removeClass(imgs[Splash.currentImgIndex], "hide");
   },
   handleKeys: function(event) {
     key = event.keyCode || event.which;
