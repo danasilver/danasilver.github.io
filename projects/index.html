@@ -1,0 +1,15 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="projects">
+    <h3>Projects</h3>
+    <ul>
+    {% for page in site.pages %}
+        {% if page.layout == "project" %}
+            <a href="{{ page.url }}"><li><span class="title">{{ page.title }}</span><span class="date">{{ page.date | date: "%b %d, %Y"}}</span></li></a>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>

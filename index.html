@@ -4,9 +4,9 @@ title: Dana Silver
 ---
 
 {% include splash.html %}
-<div class="home">
-  <ul class="posts">
-    {% for post in site.posts limit:10 %}
+<div class="posts">
+  <ul>
+    {% for post in site.posts limit:10  %}
       <a href="{{ post.url }}"><li><span class="title">{{ post.title }}</span><span class="date">{{ post.date | date: "%b %d, %Y"}}</span></li></a>
     {% endfor %}
   </ul>
