@@ -1,7 +1,16 @@
-# dana.ag
+# danasilver.org
 
-### Upload to S3
-    $ s3cmd sync _site/ s3://static.dana.ag
+My personal website.
 
-### Start Dev Server
-    $ jekyll serve --watch
+## Upload to S3
+
+```sh
+$ s3cmd sync _site/ s3://danasilver.org
+```
+
+## Start Dev Server
+
+```sh
+$ jekyll serve --watch
+```
+
