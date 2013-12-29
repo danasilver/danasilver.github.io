@@ -7,7 +7,12 @@ redcarpet:
 pygments: true
 pygments_options: ['lineanchors']
 
-exclude: ['less', '.gitignore', '*.sublime-*', 'README.md', 'js']
+exclude: ['less',
+          '.gitignore',
+          '*.sublime-*',
+          'README.md',
+          'js',
+          'build.py']
 
 permalink: pretty
 
