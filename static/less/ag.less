@@ -163,7 +163,7 @@ a {
     @media (max-width: 840px) {
       padding: 0 5px;
     }
-    p, h1, h2, h3, h4, h5, h6, pre, ul, ol, table {
+    p, h1, h2, h3, h4, h5, h6, pre, ul, ol, table, div {
       margin-bottom: 10px;
     }
     a {
@@ -179,7 +179,8 @@ a {
     header, .post, .project {
       font-size: @font-size-base;
       line-height: @line-height-base;
-      p code {
+      p code,
+      figure code {
           font-size: 90%;
           background-color: lighten(@link-color, 60%);
           padding: 2px 4px;
