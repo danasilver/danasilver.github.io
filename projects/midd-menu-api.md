@@ -4,7 +4,7 @@ title: Middlebury Menu API
 date: 2013-12-17 21:12:29 EST
 ---
 
-## A REST API for menus.middlebury.edu.
+## A REST API for the Middlebury menu.
 
 This project is open source.  The code can be found at [github.com/danasilver/midd-menu-api](https://github.com/danasilver/midd-menu-api).
 
@@ -58,7 +58,7 @@ input:focus {
 }
 #output {
   height: 500px;
-  width: 828px;
+  width: calc(100% - 12px);
   border: 1px solid #0086b3;
   margin-top: 10px;
   overflow: scroll;
