@@ -12,7 +12,8 @@ exclude: ['less',
           '*.sublime-*',
           'README.md',
           'js',
-          'build.py']
+          'build.py',
+          'snapchat-db-stats']
 
 permalink: pretty
 
