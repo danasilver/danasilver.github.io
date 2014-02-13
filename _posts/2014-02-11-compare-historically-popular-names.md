@@ -43,12 +43,29 @@ input:active, input:focus {
   padding-right: 5px;
   font: 14px sans-serif;
 }
+progress {
+  width: 100%;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #E5E5E5;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #0086B3;
+}
 
 </style>
 
 <input id="namesInput" type="text" placeholder="Enter up to 5 comma separated names then press enter">
 
-<div id="loading" style="text-align:center;">Loading the data...</div>
+<div id="loading">
+<div style="text-align:center;">Loading the data...</div>
+<progress value="10" max="100"></progress>
+</div>
 
 <svg id="names"></svg>
 
@@ -95,6 +112,11 @@ d3.csv("/static/assets/historically-popular-names/names1880-2012.csv", function(
   allData = data;
   document.querySelector("#loading").innerHTML = "";
   makeChart("Jim, Pam, Stanley");
+}).on("progress", function(e) {
+  if (d3.event.lengthComputable) {
+    percent = (d3.event.loaded / d3.event.totalSize) * 100;
+    document.querySelector("progress").value = percent;
+  }
 });
 
 function makeChart(names) {
