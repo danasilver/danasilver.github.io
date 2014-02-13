@@ -122,13 +122,13 @@ d3.csv("/static/assets/historically-popular-names/names1880-2012.csv", function(
 function makeChart(names) {
   document.querySelector("#names g").innerHTML = "";
 
-  var namesArray = names.split(",").map(function(n) { return n.trim(); });
-  namesArrayM = namesArray.map(function(n) { return n + ", M"});
-  namesArrayF = namesArray.map(function(n) { return n + ", F"});
+  var namesArray = names.split(",").map(function(n) { return n.trim().toLowerCase(); });
+  namesArrayM = namesArray.map(function(n) { return n + ", m"});
+  namesArrayF = namesArray.map(function(n) { return n + ", f"});
 
   namesSearchArray = namesArrayM.concat(namesArrayF);
 
-  data = allData.filter(function(key) { return (namesSearchArray.indexOf(key.name) > -1) });
+  data = allData.filter(function(key) { return (namesSearchArray.indexOf(key.name.toLowerCase()) > -1) });
 
   data = d3.nest()
             .key(function(d) { return d.name; })
@@ -193,6 +193,7 @@ function makeChart(names) {
 d3.select("#namesInput").on("keypress", function() {
   if (d3.event.keyCode === 13 || d3.event.which === 13) {
     makeChart(this.value);
+    _gaq.push(['_trackEvent', 'Compare Names', 'Submit', this.value.toString()]);
   }
 });
 
