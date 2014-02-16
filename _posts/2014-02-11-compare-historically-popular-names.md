@@ -122,7 +122,7 @@ var svg = d3.select("#names")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var allData;
-d3.csv("/static/assets/historically-popular-names/names1880-2012.csv", function(d) {
+d3.csv("/static/assets/historically-popular-names/names1880-2012.json", function(d) {
   return {
     year: new Date(+d.Year, 0, 1),
     count: +d.Count,
