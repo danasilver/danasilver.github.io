@@ -18,8 +18,14 @@ message=$(git log -1 --pretty=%B)
 cd ../danasilver.github.io
 
 # Create the CNAME record
+echo
 echo "${ltblue}Creating CNAME record...${NC}"
 echo "www.danasilver.org" > CNAME
+
+echo
+echo "${ltblue}Moving 404 page...${NC}"
+mv 404/index.html 404.html
+rm -r 404
 
 echo
 echo "${ltblue}git status${NC}"
