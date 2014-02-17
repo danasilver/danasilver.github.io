@@ -13,7 +13,9 @@ exclude: ['less',
           'README.md',
           'js',
           'build.py',
-          'snapchat-db-stats']
+          'build_gh.sh',
+          'snapchat-db-stats',
+          'Gemfile']
 
 permalink: pretty
 
