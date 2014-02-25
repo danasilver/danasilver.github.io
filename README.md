@@ -1,16 +1,13 @@
-# danasilver.org
+## danasilver.org
 
-My personal website.
+The development repository for [www.danasilver.org](http://www.danasilver.org).
 
-## Upload to S3
+### Deploy
 
-```sh
-$ s3cmd sync _site/ s3://danasilver.org
-```
-
-## Start Dev Server
+[www.danasilver.org](http://www.danasilver.org) is deployed to Github Pages.  Deploy using:
 
 ```sh
-$ jekyll serve --watch
+$ ./build_gh.sh
 ```
 
+Builds go into the [danasilver.github.io](https://github.com/danasilver/danasilver.github.io) repository and are immediately live.

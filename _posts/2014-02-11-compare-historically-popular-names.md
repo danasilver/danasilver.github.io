@@ -140,6 +140,7 @@ d3.csv("/static/assets/historically-popular-names/names1880-2012.json", function
   }
   
 }).on("progress", function(e) {
+  console.log(d3.event);
   if (d3.event.lengthComputable) {
     percent = (d3.event.loaded / d3.event.totalSize) * 100;
     document.querySelector("progress").value = percent;
@@ -277,7 +278,7 @@ var svg = d3.select("#names")
 
 #### Data
 
-The data is hosted at [danasilver.org/static/assets/historically-popular-names/names1880-2012.csv](http://danasilver.org/static/assets/historically-popular-names/names1880-2012.csv).  I obtained it from my Computer Science Information Visualization course.  I request the data with [d3.csv](https://github.com/mbostock/d3/wiki/CSV), use an accessor method to format each data point, and use a callback to manipulate the data.
+The data is hosted at [danasilver.org/static/assets/historically-popular-names/names1880-2012.json](http://danasilver.org/static/assets/historically-popular-names/names1880-2012.json).  (The CSV has a JSON extension so Github Pages will gzip it.)  I obtained it from my Computer Science Information Visualization course.  I request the data with [d3.csv](https://github.com/mbostock/d3/wiki/CSV), use an accessor method to format each data point, and use a callback to manipulate the data.
 
 Saving all the loaded data to the variable `allData` makes it easy to make other charts based on user input without requesting the data each time.  The first time the data is loaded, I check if there is a `names` URL parameter from which to create the initial chart.  If `names` is empty, I use the placeholder "Jim, Pam, Stanley" to create the chart.
 
@@ -285,7 +286,7 @@ The `.on("progress")` listens for `d3.csv`'s [progress event](https://developer.
 
 ```javascript
 var allData;
-d3.csv("/static/assets/historically-popular-names/names1880-2012.csv", function(d) {
+d3.csv("/static/assets/historically-popular-names/names1880-2012.json", function(d) {
   return {
     year: new Date(+d.Year, 0, 1),
     count: +d.Count,
