@@ -37,11 +37,11 @@ svg {
 }
 </style>
 
+The first ionization energy is the energy required to remove one electron from an atom in its gaseous state.  This energy is measured in kJ/mol.  From the chart we can observe periodic trends and inconsistencies.  Mouseover the chart to view individual elements.
+
 <svg></svg>
 
 ### Data
-
-The first ionization energy is the energy required to remove one electron from an atom in its gaseous state.  This energy is measured in kJ/mol.  From the chart we can observe periodic trends and inconsistencies.
 
 I retrieved the data from Wikipedia's [Molar ionization energies of the elements](http://en.wikipedia.org/wiki/Molar_ionization_energies_of_the_elements) article, which lists the 1st through 30th ionization energies for the applicable elements.  The first ionization energy is the only one that is applicable to all the elements.  I scraped the data in the browser console using jQuery already running on the page and copied the result to a [JSON file](/static/assets/first-ionization-energies/i1.json).
 
