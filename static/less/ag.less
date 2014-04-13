@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:300,700);
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 .horizontal-gradient (@startColor: #eee, @endColor: white) {
   background-color: @startColor;
@@ -12,8 +14,9 @@
 @mobile-width: 600px;
 @mobile-width-limit: (@mobile-width - 1);
 @header-color: #E5E5E5;
-@article-shade-color: lighten(@header-color, 5%);
+@article-shade-color: #d9d9d9;
 @link-color: #0086B3;
+@base-font: "Helvetica Neue", Helvetica, sans-serif;
 
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
@@ -43,8 +46,8 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  font-family: @base-font;
   color: #333;
   overflow-x: scroll;
 }
@@ -73,6 +76,8 @@ a {
     width: 840px;
   }
 }
+
+svg { font-family: @base-font; }
 
 /*******************************
 *         MAIN HEADER          *
@@ -174,23 +179,25 @@ a {
         text-decoration: underline;
       }
     }
-    header p {
+    header {
       margin-bottom: 20px;
+      p {
+        font-size: @font-size-base;
+        line-height: @line-height-base;
+      }
     }
-    header, .post, .project {
+    .post, .project {
       font-size: @font-size-base;
       line-height: @line-height-base;
+      p, ul, ol { font-family: "Noto Serif", serif; }
       p code,
       form code,
       figure code {
-          font-size: 90%;
-          background-color: lighten(@link-color, 60%);
-          padding: 2px 4px;
-          color: @link-color;
-          border-radius: 3px;
+        color: @link-color;
       }
       code, pre {
-        font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+        font-family: Inconsolata, monospace;
+        font-size: 16px;
       }
       blockquote {
         padding-left: 20px;
@@ -335,44 +342,11 @@ a {
 ********************************/
 
 pre {
-  counter-reset: line-numbering;
-  border: solid 1px #d9d9d9;
-  border-radius: 0;
-  background-color: #ffffff;
-  padding: 0;
+  border-left: solid 3px @article-shade-color;
   line-height: 18px;
   white-space: pre;
   overflow-x: auto;
   word-break: inherit;
   word-wrap: inherit;
-  font-size: 12px !important;
-  a::before {
-    content: counter(line-numbering);
-    counter-increment: line-numbering;
-    padding-right: 1em;
-    width: 25px;
-    text-align: right;
-    opacity: 0.7;
-    display: inline-block;
-    color: #777;
-    background: @article-shade-color;
-    margin-right: 16px;
-    padding: 2px 10px;
-    font-size: 12px;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  a:first-of-type::before {
-    padding-top: 10px;
-  }
-  a:last-of-type::before {
-    padding-bottom: 10px;
-  }
-  a:only-of-type::before {
-    padding: 10px;
-  }
+  padding: 0 0 0 10px;
 }

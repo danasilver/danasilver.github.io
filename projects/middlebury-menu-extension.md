@@ -26,6 +26,7 @@ button {
   border: 1px solid #0086b3;
   border-radius: 4px;
   background-color: #37A8CE;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 button:active,
 button:focus {
