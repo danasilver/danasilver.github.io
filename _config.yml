@@ -5,7 +5,6 @@ redcarpet:
     extensions: ['fenced_code_blocks', 'autolink', 'tables', 'no_intra_emphasis']
 
 pygments: true
-pygments_options: ['lineanchors']
 
 exclude: ['less',
           '.gitignore',
