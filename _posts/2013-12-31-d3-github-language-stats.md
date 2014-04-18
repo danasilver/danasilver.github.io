@@ -10,10 +10,10 @@ These charts are largely based on the charts in Mike Bostock's [Let's Make a Bar
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
 ### Fetching the Data
-I am using the language data from my [Github repository for this website](https://github.com/danasilver/danasilver.org). The Github API returns an object containing each language and the number of bytes of that language in the repository. I request the data using `d3.json` and call `makeChart(languageJSON)` on the response.  The code for the examples below is contained in `makeChart`.
+I am using the language data from my [Github repository for this website](https://github.com/danasilver/danasilver.github.io). The Github API returns an object containing each language and the number of bytes of that language in the repository. I request the data using `d3.json` and call `makeChart(languageJSON)` on the response.  The code for the examples below is contained in `makeChart`.
 
 ```js
-var url = "https://api.github.com/repos/danasilver/danasilver.org/languages";
+var url = "https://api.github.com/repos/danasilver/danasilver.github.io/languages";
 d3.json(url, makeChart);
 
 function makeChart(languageJSON) {
@@ -214,7 +214,7 @@ bar.append("text")
 ```
 
 <script>
-var url = "https://api.github.com/repos/danasilver/danasilver.org/languages";
+var url = "https://api.github.com/repos/danasilver/danasilver.github.io/languages";
 d3.json(url, makeChart);
 
 function makeChart(languageJSON) {

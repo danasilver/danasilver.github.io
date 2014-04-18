@@ -11,8 +11,6 @@ exclude: ['less',
           '*.sublime-*',
           'README.md',
           'js',
-          'build.py',
-          'build_gh.sh',
           'snapchat-db-stats',
           'Gemfile']
 
