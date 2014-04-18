@@ -1,7 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:300,700);
 
-@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700);
-
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 /*******************************
 *          NORMALIZE           *
@@ -213,7 +211,8 @@ svg {
 .content article .project ul,
 .content article .post ol,
 .content article .project ol {
-  font-family: "Noto Serif", serif;
+  font-family: Georgia, serif;
+  font-size: 16px;
 }
 .content article .post p code,
 .content article .project p code,

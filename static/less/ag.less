@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:300,700);
-@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700);
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 
 .horizontal-gradient (@startColor: #eee, @endColor: white) {
@@ -189,7 +188,10 @@ svg { font-family: @base-font; }
     .post, .project {
       font-size: @font-size-base;
       line-height: @line-height-base;
-      p, ul, ol { font-family: "Noto Serif", serif; }
+      p, ul, ol {
+        font-family: Georgia, serif;
+        font-size: 16px;
+      }
       p code,
       form code,
       figure code {
