@@ -253,3 +253,4 @@ d3.json("/static/assets/last-letter/last-letter.json", function(letters) {
   var incrementYear = (function() { var x = 1880; return function() { return x++; }})();
 });
 </script>
+<img src="/static/assets/last-letter/last-letter.png" style="display:none;">
