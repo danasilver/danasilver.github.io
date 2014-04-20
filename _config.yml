@@ -8,10 +8,8 @@ pygments: true
 
 exclude: ['less',
           '.gitignore',
-          '*.sublime-*',
           'README.md',
           'js',
-          'snapchat-db-stats',
           'Gemfile']
 
 permalink: pretty
