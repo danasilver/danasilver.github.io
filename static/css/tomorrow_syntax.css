@@ -26,7 +26,7 @@
 }
 /* Name */
 .highlight .o {
-  color: #3e999f;
+  color: #519eb1;
 }
 /* Operator */
 .highlight .p {
@@ -63,7 +63,7 @@
 }
 /* Generic.Heading */
 .highlight .gi {
-  color: #718c00;
+  color: #31a354;
 }
 /* Generic.Inserted */
 .highlight .gp {
@@ -76,7 +76,7 @@
 }
 /* Generic.Strong */
 .highlight .gu {
-  color: #3e999f;
+  color: #519eb1;
   font-weight: bold;
 }
 /* Generic.Subheading */
@@ -89,7 +89,7 @@
 }
 /* Keyword.Declaration */
 .highlight .kn {
-  color: #3e999f;
+  color: #519eb1;
 }
 /* Keyword.Namespace */
 .highlight .kp {
@@ -105,7 +105,7 @@
 }
 /* Keyword.Type */
 .highlight .ld {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.Date */
 .highlight .m {
@@ -113,7 +113,7 @@
 }
 /* Literal.Number */
 .highlight .s {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String */
 .highlight .na {
@@ -133,7 +133,7 @@
 }
 /* Name.Constant */
 .highlight .nd {
-  color: #3e999f;
+  color: #519eb1;
 }
 /* Name.Decorator */
 .highlight .ni {
@@ -156,16 +156,12 @@
   color: #eab700;
 }
 /* Name.Namespace */
-.highlight .nx {
-  color: #4271ae;
-}
-/* Name.Other */
 .highlight .py {
   color: #4d4d4c;
 }
 /* Name.Property */
 .highlight .nt {
-  color: #3e999f;
+  color: #519eb1;
 }
 /* Name.Tag */
 .highlight .nv {
@@ -173,7 +169,7 @@
 }
 /* Name.Variable */
 .highlight .ow {
-  color: #3e999f;
+  color: #519eb1;
 }
 /* Operator.Word */
 .highlight .w {
@@ -197,7 +193,7 @@
 }
 /* Literal.Number.Oct */
 .highlight .sb {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String.Backtick */
 .highlight .sc {
@@ -209,7 +205,7 @@
 }
 /* Literal.String.Doc */
 .highlight .s2 {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String.Double */
 .highlight .se {
@@ -217,7 +213,7 @@
 }
 /* Literal.String.Escape */
 .highlight .sh {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String.Heredoc */
 .highlight .si {
@@ -225,19 +221,19 @@
 }
 /* Literal.String.Interpol */
 .highlight .sx {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String.Other */
 .highlight .sr {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String.Regex */
 .highlight .s1 {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String.Single */
 .highlight .ss {
-  color: #718c00;
+  color: #31a354;
 }
 /* Literal.String.Symbol */
 .highlight .bp {

@@ -163,15 +163,13 @@ svg {
   /*******************************
   *            POSTS             *
   ********************************/
-  h3 {
-    @media (max-width: 840px) { padding: 0 5px; }
-  }
   article {
     margin-bottom: 30px;
     @media (max-width: 840px) {
       padding: 0 5px;
     }
-    p, h1, h2, h3, h4, h5, h6, pre, ul, ol, table, div {
+    p, h1, h2, h3, h4, h5, h6, pre,
+    ul, ol, table, div, pre {
       margin-bottom: 10px;
     }
     a {
@@ -214,11 +212,11 @@ svg {
       table {
         border-collapse: collapse;
         th, td {
-          border: 1px solid #d9d9d9;
+          border: 1px solid @article-shade-color;
           padding: 6px 13px;
         }
         tr:nth-child(2n) {
-          background-color: @article-shade-color;
+          background-color: lighten(@article-shade-color, 10%);
         }
       }
       img {

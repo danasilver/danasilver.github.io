@@ -160,11 +160,6 @@ svg {
   ********************************/
 
 }
-@media (max-width: 840px) {
-  .content h3 {
-    padding: 0 5px;
-  }
-}
 .content article {
   margin-bottom: 30px;
 }
@@ -184,7 +179,8 @@ svg {
 .content article ul,
 .content article ol,
 .content article table,
-.content article div {
+.content article div,
+.content article pre {
   margin-bottom: 10px;
 }
 .content article a {
@@ -254,7 +250,7 @@ svg {
 }
 .content article .post table tr:nth-child(2n),
 .content article .project table tr:nth-child(2n) {
-  background-color: #d9d9d9;
+  background-color: #f3f3f3;
 }
 .content article .post img,
 .content article .project img {
