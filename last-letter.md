@@ -50,6 +50,40 @@ A D3 recreation of David Taylor's visualization [The meteoric rise of boys' name
 
 The chart shows the number of children born with names ending in each letter.  Adjust the slider to change the year.  Toggle the checkboxes to show boys, girls, or both.
 
+### Data
+
+The original dataset is the same used in the [Compare Historically Popular Names](/popular-names) visualization.  Of course, this visualization doesn't require every name &mdash; just the last letter of each name and its aggregate count.  The 28 MB [names dataset](/static/assets/historically-popular-names/names1880-2012.json) can be whittled down to a mere 80 KB [JSON file](/static/assets/last-letter/last-letter.json).
+
+```py
+import csv
+import json
+
+def main():
+    output = {}
+
+    # Initialize output
+    for year in range(1880, 2013):
+        output[year] = {'F': {}, 'M': {}}
+        for letter in list(map(chr, range(97, 123))):
+            output[year]['F'][letter] = 0
+            output[year]['M'][letter] = 0
+
+    reader = csv.reader(open('names1880-2012.csv', 'r'))
+    reader.next()
+    for row in reader:
+        last_letter = row[0][-1]
+        gender      = row[1]
+        count       = int(row[2])
+        year        = int(row[3])
+        output[year][gender][last_letter] += count
+
+    writer = open('last-letter.json', 'w')
+    json.dump(output, writer)
+    writer.close()
+```
+
+### Visualization
+
 ```js
 var margin = {top: 10, right: 20, bottom: 40, left: 60},
     width = 840 - margin.left - margin.right,
@@ -150,7 +184,6 @@ d3.json("/static/assets/last-letter/last-letter.json", function(letters) {
   var incrementYear = (function() { var x = 1880; return function() { return x++; }})();
 });
 ```
-
 
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>
