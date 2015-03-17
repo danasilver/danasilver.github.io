@@ -1,24 +1,53 @@
 ---
 layout: default
-title: Dana Silver
 ---
 
-{% include splash.html %}
-<div class="posts">
-  <ul>
-    <a href="/last-letter"><li><span class="title">Last Letter of First Names</span><span class="date">Apr 18, 2014</span></li></a>
-    <a href="/us-map"><li><span class="title">Map of the U.S.</span><span class="date">Mar 11, 2014</span></li></a>
-    <a href="/ionization"><li><span class="title">First Ionization Energies</span><span class="date">Mar 10, 2014</span></li></a>
-    <a href="/sochi"><li><span class="title">Sochi 2014 Athletes</span><span class="date">Feb 25, 2014</span></li></a>
-    <a href="/popular-names"><li><span class="title">Compare Historically Popular Names</span><span class="date">Feb 11, 2014</span></li></a>
-    <a href="/github-language-stats"><li><span class="title">Github Language Stats</span><span class="date">Dec 31, 2013</span></li></a>
-  </ul>
-  <hr>
-  <ul>
-    {% for page in site.pages %}
-        {% if page.layout == "project" %}
-            <a href="{{ page.url }}"><li><span class="title">{{ page.title }}</span><span class="date">{{ page.date | date: "%b %d, %Y"}}</span></li></a>
-        {% endif %}
-    {% endfor %}
-  </ul>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="static/css/styles.css" rel="stylesheet">
+</head>
+<body>
+  {% include splash.html %}
+  <div class="posts">
+    <ul>
+      <a href="/last-letter"><li>
+        <p><span class="title">Last Letter of First Names</span>
+        <span class="date">April 18, 2014</span></p>
+        <img src="/img/last-letter.png">
+      </li></a>
+
+      <a href="/us-map"><li>
+        <p><span class="title">Map of the U.S.</span>
+        <span class="date">March 11, 2014</span></p>
+        <img src="/img/us-map.png">
+      </li></a>
+
+      <a href="/ionization"><li>
+        <p><span class="title">First Ionization Energies</span>
+        <span class="date">March 10, 2014</span></p>
+        <img src="/img/i1.png">
+      </li></a>
+
+      <a href="/sochi"><li>
+        <p><span class="title">Sochi 2014 Athletes</span>
+        <span class="date">February 25, 2014</span></p>
+        <img src="/img/sochi.png">
+      </li></a>
+
+      <a href="/popular-names"><li>
+        <p><span class="title">Compare Historically Popular Names</span>
+        <span class="date">February 11, 2014</span></p>
+        <img src="/img/popular-names.png">
+      </li></a>
+
+      <a href="/popular-names"><li>
+        <p><span class="title">GitHub Language Stats</span>
+        <span class="date">December 31, 2013</span></p>
+        <img src="/img/github-lang-stats.png">
+      </li></a>
+    </ul>
+  </div>
+</body>
+</html>

@@ -4,7 +4,7 @@ title: Compare Historically Popular Names
 date: 2014-02-11 15:00:00 EST
 ---
 
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="/d3.v3.min.js" charset="utf-8"></script>
 
 <style>
 #names {
@@ -46,7 +46,7 @@ input#chartUrl {
   color: #666;
 }
 
-input:active, 
+input:active,
 input:focus {
   border-color: #0086b3;
 }
@@ -138,7 +138,7 @@ d3.csv("/static/assets/historically-popular-names/names1880-2012.json", function
   } else {
     makeChart(paramNames);
   }
-  
+
 }).on("progress", function(e) {
   console.log(d3.event);
   if (d3.event.lengthComputable) {
@@ -216,7 +216,7 @@ function makeChart(names) {
       .data(data)
     .enter().append("text")
       .text(function(d) { return d.key; })
-      .attr("transform", function(d) { 
+      .attr("transform", function(d) {
         var offset = this.previousSibling ? this.previousSibling.getBBox().width : 0;
         sumOffsets += offset + 10;
         return "translate(" + sumOffsets + ",0)";
@@ -302,7 +302,7 @@ d3.csv("/static/assets/historically-popular-names/names1880-2012.json", function
   } else {
     makeChart(paramNames);
   }
-  
+
 }).on("progress", function(e) {
   if (d3.event.lengthComputable) {
     percent = (d3.event.loaded / d3.event.totalSize) * 100;
@@ -408,7 +408,7 @@ function makeChart(names) {
       .attr("transform", "translate(10,-10)");
 
   // Create a legend using the data
-  // Each text element's offset is computed on the fly using 
+  // Each text element's offset is computed on the fly using
   // the previous siblings' widths.
   // Text colors are obtained using the color ordinal scale.
   var sumOffsets = 0;
@@ -416,7 +416,7 @@ function makeChart(names) {
       .data(data)
     .enter().append("text")
       .text(function(d) { return d.key; })
-      .attr("transform", function(d) { 
+      .attr("transform", function(d) {
         var offset = this.previousSibling ? this.previousSibling.getBBox().width : 0;
         sumOffsets += offset + 10;
         return "translate(" + sumOffsets + ",0)";

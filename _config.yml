@@ -1,11 +1,5 @@
 name: Dana Silver
 
-markdown: redcarpet
-redcarpet:
-    extensions: ['fenced_code_blocks', 'autolink', 'tables', 'no_intra_emphasis']
-
-pygments: true
-
 exclude: ['less',
           '.gitignore',
           'README.md',
@@ -14,4 +8,4 @@ exclude: ['less',
 
 permalink: pretty
 
-splash_imgs: ['/static/imgs/splash/tetons_short.jpg', '/static/imgs/splash/bikeburl_short.jpg']
+splash_imgs: ['/static/imgs/splash/tetons_short.jpg']
