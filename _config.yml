@@ -8,4 +8,9 @@ exclude: ['less',
 
 permalink: pretty
 
+kramdown:
+  input: GFM
+
+highlighter: pygments
+
 splash_imgs: ['/static/imgs/splash/tetons_short.jpg']
