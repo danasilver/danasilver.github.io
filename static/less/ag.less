@@ -285,8 +285,9 @@ svg {
 ********************************/
 .posts, .projects {
   margin-top: 25px;
-  font-family: "Oxygen", sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
+  font-weight: 300;
   min-height: 300px;
   h1 {
     margin-bottom: 20px;
@@ -303,20 +304,25 @@ svg {
     li {
       list-style: none;
       padding: 10px 0;
-      transition: background-color 0.25s;
+      color: #333;
       .title {
-        padding-left: 10px;
+        @media (max-width: 840px) {
+          padding: 0 0 0 5px;
+        }
       }
       .date {
+        display: inline-block;
         float: right;
-        padding-right: 10px;
-        @media (max-width: @mobile-width-limit) {
+        text-align: right;
+        font-size: 14px;
+        @media (max-width: 840px) {
           display: none;
         }
       }
       &:hover {
-        background-color: @header-color;
-        transition: background-color 0.25s;
+        .title {
+          text-decoration: underline;
+        }
       }
     }
   }

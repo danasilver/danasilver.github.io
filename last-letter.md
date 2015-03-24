@@ -119,7 +119,7 @@ d3.json("/static/assets/last-letter/last-letter.json", function(letters) {
     .enter().append("g")
       .attr("class", "bar")
       .attr("transform", function(d) { return "translate(" + x(d.key) + ",0)"})
-    .append("rect")    
+    .append("rect")
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.value); })
       .attr("height", function(d) { return height - y(d.value); });
@@ -185,7 +185,7 @@ d3.json("/static/assets/last-letter/last-letter.json", function(letters) {
 });
 ```
 
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="/d3.v3.min.js" charset="utf-8"></script>
 <script>
 var margin = {top: 10, right: 20, bottom: 40, left: 60},
     width = 840 - margin.left - margin.right,
@@ -221,7 +221,7 @@ d3.json("/static/assets/last-letter/last-letter.json", function(letters) {
     .enter().append("g")
       .attr("class", "bar")
       .attr("transform", function(d) { return "translate(" + x(d.key) + ",0)"})
-    .append("rect")    
+    .append("rect")
       .attr("width", x.rangeBand())
       .attr("y", function(d) { return y(d.value); })
       .attr("height", function(d) { return height - y(d.value); });
