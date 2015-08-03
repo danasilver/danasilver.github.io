@@ -1,15 +1,24 @@
----
-layout: default
----
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
-  <link href="static/css/styles.css" rel="stylesheet">
+  <title>Dana Silver</title>
+  <link href="/styles/silver.css" rel="stylesheet">
+  <link href="/img/favicon.ico" rel="icon">
 </head>
 <body>
-  <div class="splash"><img src="/static/imgs/splash/tetons_short.jpg"></div>
+  <header>
+    <div>
+      <a href="/">Dana Silver</a>
+      <span class="nav">
+        <a href="https://www.twitter.com/DanaRSilver">@DanaRSilver</a>
+        <a href="https://www.github.com/danasilver">GitHub</a>
+        <a href="/resume">Resume</a>
+      </span>
+    </div>
+  </header>
+  <article>
+  <div class="splash"><img src="/img/tetons.jpg"></div>
   <div class="posts">
     <ul>
       <a href="/last-letter"><li>
@@ -49,5 +58,42 @@ layout: default
       </li></a>
     </ul>
   </div>
+
+  <div class="posts">
+    <h2>Projects</h2>
+    <ul>
+      <a href="/projects/django-dana-time"><li>
+        <p><b class="title">Django Dana Time</b></p>
+        <p>Compact, easy to read date-time formatting for Django.</p>
+      </li></a>
+
+      <a href="/projects/midd-menu-api"><li>
+        <p><b class="title">Middlebury Menu API</b></p>
+        <p>A RESTful API for the Middlebury College online menu. Serves as the
+        foundation for the Middlebury Menu App.</p>
+      </li></a>
+
+      <a href="/projects/middlebury-menu-extension"><li>
+        <p><b class="title">Middlebury Menu Extension</b></p>
+        <p>A Google Chrome extension to clean up the Middlebury menu.</p>
+      </li></a>
+    </ul>
+  </div>
+  </article>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    var pluginUrl =
+     '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-46756115-1']);
+    _gaq.push(['_setDomainName', 'danasilver.org']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 </body>
 </html>

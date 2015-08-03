@@ -1,0 +1,159 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Georgia, serif;
+}
+
+svg {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #0086b3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2, h3, h4 {
+  margin: 20px 0 10px 0;
+}
+
+.date {
+  float: right;
+  color: #999;
+}
+
+p {
+  line-height: 1.4;
+}
+
+header > div, article, footer {
+  margin: auto;
+  width: 840px;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  background-color: #e5e5e5;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 300;
+  border-bottom: 1px solid rgb(178, 178, 178);
+}
+
+header a {
+  font-size: 30px;
+  text-decoration: none;
+  line-height: 50px;
+  color: #000;
+}
+
+header .nav {
+  float: right;
+  line-height: 50px;
+}
+
+header .nav a {
+  text-decoration: none;
+  padding: 0 3px;
+  font-size: 16px;
+}
+
+header .nav a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: Inconsolata, monospace;
+  line-height: 1em;
+}
+
+pre {
+  border-left: solid 3px #d9d9d9;
+  line-height: 18px;
+  white-space: pre;
+  overflow-x: auto;
+  padding: 0 0 0 10px;
+  line-height: 1em;
+  margin: 2em 0 2em -20px;
+}
+
+pre > code {
+  margin-top: -1em;
+}
+
+footer {
+  margin-bottom: 30px;
+  color: #999;
+}
+
+.posts p {
+  margin: 0 0 5px 0;
+}
+
+.posts ul {
+  padding: 0;
+}
+
+.posts a {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+}
+
+.posts a:hover .title {
+  text-decoration: underline;
+}
+
+.posts li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.posts .date {
+  display: inline-block;
+  float: right;
+  text-align: right;
+}
+
+article.resume p {
+  margin: 0 0 5px;
+}
+
+article.resume ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+section {
+  margin: 25px 0;
+}
+
+.subsection {
+  margin: 20px 0 10px 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
