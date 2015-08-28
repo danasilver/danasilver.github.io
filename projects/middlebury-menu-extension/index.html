@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+  <title>Middlebury Menu Extension</title>
+  <link rel="stylesheet" href="/styles/silver.css">
+  <link rel="stylesheet" href="/styles/tomorrow.css">
+  <link href="/img/favicon.ico" rel="icon">
+
+  <style>
+    button {
+      height: 40px;
+      width: 150px;
+      color: #fff;
+      display: inline-block;
+      padding: 2px 4px;
+      font-size: 100%;
+      font-family: inherit;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #0086b3;
+      border-radius: 4px;
+      background-color: #37A8CE;
+      font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+    button:active,
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <a href="/">Dana Silver</a>
+    <span class="nav">
+      <a href="https://twitter.com/DanaRSilver">@DanaRSilver</a>
+      <a href="https://www.github.com/danasilver">GitHub</a>
+      <a href="/resume">Resume</a>
+    </span>
+  </div>
+</header>
+<article>
+<p class="date">Updated January 14, 2014</p>
+<h1>Middlebury Menu Extension</h1>
+
+<h2>A Chrome extension for the Middlebury menu.</h2>
+
+<img src="small-tile.png">
+
+<h3>Install</h3>
+
+<p>You can get the extension in the
+<a href="https://chrome.google.com/webstore/detail/middlebury-menu/hcmnnfdhfkhonkonabfebpkjggndbbno">Chrome Web Store</a>
+or install it right here.</p>
+
+<p id="statusText"></p>
+
+<button id="installBtn" onclick="installExtension()">Add to Chrome</button>
+
+<h3>Features</h3>
+
+<ul>
+  <li>Clean, easy to read dates.</li>
+  <li>One click buttons for the next and previous dates.</li>
+  <li>One click from the calendar popup to any date.</li>
+</ul>
+
+<h3>Screenshots</h3>
+
+<a href="screenshot_1.png">
+  <img width="840px" src="screenshot_1.png">
+</a>
+
+<a href="screenshot_2.png">
+  <img width="840px" src="screenshot_2.png">
+</a>
+
+<h3>Bugs and Features</h3>
+
+<p>Found a bug or have a feature request?</p>
+
+<ul>
+ <li>Open an issue on
+  <a href="https://github.com/danasilver/midd-menu-extension/issues">GitHub</a>.</li>
+ <li>Contact <a href="https://twitter.com/DanaRSilver">@DanaRSilver</a>.</li>
+</ul>
+
+<h3>Open Source</h3>
+
+<p>This project is open source and released under the
+<a href="https://github.com/danasilver/midd-menu-extension/blob/master/LICENCE.txt">MIT License</a>.
+The code can be found on
+<a href="https://github.com/danasilver/midd-menu-extension">GitHub</a>.</p>
+
+</article>
+
+<footer>
+  <p>Dana Silver / January 14, 2014</p>
+</footer>
+
+<script>
+var installedText = document.getElementById("extensionInstalled")
+  , statusText = document.getElementById("statusText")
+  , installBtn = document.getElementById("installBtn")
+  , isChrome = /chrom(e|ium)/.test(navigator.userAgent.toLowerCase());
+
+if (chrome.app.isInstalled) {
+  // extension installed
+  statusText.style.display = "none";
+}
+else if (isChrome) {
+  // not installed but running chrome
+
+}
+else {
+  // not running chrome
+  statusText.innerHTML = "You'll need to download <a href='https://www.google.com/intl/en/chrome/browser/'>Google Chrome</a> before you can install."
+  installBtn.style.display = "none";
+}
+
+if (chrome.app.isInstalled) {
+  installedText.innerText = "You already have the Middlebury Menu Extension installed."
+}
+function installExtension() {
+  chrome.webstore.install("https://chrome.google.com/webstore/detail/hcmnnfdhfkhonkonabfebpkjggndbbno");
+}
+</script>
+</body>
+</html>
