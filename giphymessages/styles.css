@@ -1,0 +1,85 @@
+header {
+  background-color: #fff;
+  border-bottom: 1px solid rgb(51, 85, 154);
+}
+
+p {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: #000;
+}
+
+.preamble {
+  width: 100%;
+  margin: auto;
+  display: table;
+}
+
+.logo {
+  display: table-cell;
+  margin: 20px 0 0 0;
+}
+
+.preamble-text {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.preamble-text h1 {
+  margin: .7em 0;
+  text-align: center;
+  font-weight: 300;
+  font-size: 4em;
+}
+
+.preamble-text img {
+  display: block;
+  margin: 0 auto;
+}
+
+.download {
+  display: block;
+  margin: 45px auto 0 auto;
+  width: 250px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 10px 20px;
+  border: 1px solid rgb(51, 85, 154);
+  border-radius: 5px;
+  color: rgb(51, 85, 154);
+  background-color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.download:hover {
+  color: #fff;
+  background-color: rgb(51, 85, 154);
+}
+
+#messages-example {
+  margin-left: -53px;
+}
+
+.description {
+  text-align: center;
+}
+
+.description:first-of-type {
+  margin-top: 45px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.separator {
+  border-bottom: 1px solid rgb(51, 85, 154);;
+}
+
+#catveats, #faq {
+  margin-bottom: 50px;
+}
