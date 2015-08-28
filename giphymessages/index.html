@@ -25,7 +25,7 @@
       <div class="preamble-text">
         <h1>Giphy Messages</h1>
         <img src="PoweredBy_Horizontal_Light-Backgrounds.gif" width="320">
-        <a class="download" href="https://github.com/danasilver/giphy-messages/releases/download/v1.4/Giphy.Messages.dmg">Download Giphy Messages</a>
+        <a class="download" id="download-1" href="https://github.com/danasilver/giphy-messages/releases/download/v1.4/Giphy.Messages.dmg">Download Giphy Messages</a>
       </div>
     </div>
 
@@ -50,7 +50,7 @@
     <b>Giphy.applescript</b> as the <b>AppleScript handler</b>. Don't worry,
     we'll walk you through this in the app.</p>
 
-    <a class="download" href="https://github.com/danasilver/giphy-messages/releases/download/v1.4/Giphy.Messages.dmg">Download Giphy Messages</a>
+    <a class="download" id="download-2" href="https://github.com/danasilver/giphy-messages/releases/download/v1.4/Giphy.Messages.dmg">Download Giphy Messages</a>
   </article>
   <div class="separator"></div>
 
@@ -87,5 +87,34 @@
     <p>Copyright &copy; 2015 Dana Silver. All rights reserved.</p>
     <p>Giphy Messages is not affiliated with Giphy, Inc. or Apple, Inc.</p>
   </footer>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    var pluginUrl =
+     '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+    _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+    _gaq.push(['_setAccount', 'UA-46756115-1']);
+    _gaq.push(['_setDomainName', 'danasilver.org']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    function downloadClicked(firstOrSecond) {
+      _gaq.push(["_trackEvent", "Giphy Messages", "Download", firstOrSecond]);
+    }
+
+    document.getElementById("download-1").addEventListener("click", function () {
+      downloadClicked("1");
+    });
+
+    document.getElementById("download-2").addEventListener("click", function () {
+      downloadClicked("2");
+      console.log("hi");
+    });
+  </script>
 </body>
 </html>
