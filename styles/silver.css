@@ -97,7 +97,7 @@ code {
 pre {
   white-space: pre;
   overflow-x: auto;
-  margin: 2em 0 2em -8px;
+  margin: 2em 0;
 }
 
 pre > code {
