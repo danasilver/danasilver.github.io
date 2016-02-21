@@ -3,7 +3,7 @@
 <head>
   <title>First Ionization Energies</title>
   <link rel="stylesheet" href="/styles/silver.css">
-  <link rel="stylesheet" href="/styles/tomorrow.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
   <link href="/img/favicon.ico" rel="icon">
   <style>
   svg {
@@ -226,13 +226,16 @@ d3.json("i1.json", function(error, data) {
 
 <footer>
   <p>Dana Silver / March 10, 2014</p>
+  <span class="nav">
+    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
+  </span>
 </footer>
 
 <img style="display:none;" src="i1.png">
 
-<script src="/js/highlight.pack.js" charset="utf-8"></script>
+<script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/d3.v3.min.js" charset="utf-8"></script>
+<script src="/vendor/d3/d3.v3.min.js" charset="utf-8"></script>
 
 <script>
 var margin = {top: 20, right: 80, bottom: 30, left: 50},

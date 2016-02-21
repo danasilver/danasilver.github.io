@@ -3,7 +3,7 @@
 <head>
   <title>Map of the U.S</title>
   <link rel="stylesheet" href="/styles/silver.css">
-  <link rel="stylesheet" href="/styles/tomorrow.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
   <link rel="icon" href="/img/favicon.ico">
   <style>
   .state {
@@ -53,7 +53,7 @@ the point.</p>
 
 <h2>Visualization</h2>
 
-In addition to <a href="http://d3js.org/d3.v3.min.js">D3</a>, this
+<p>In addition to <a href="http://d3js.org/d3.v3.min.js">D3</a>, this
 visualization relies on TopoJSON. The map uses an
 <a href="https://github.com/mbostock/d3/wiki/Geo-Projections#wiki-albersUsa">Albers USA</a>
 projection, for which Alaska is scaled by 0.35x, giving it a
@@ -61,7 +61,7 @@ projection, for which Alaska is scaled by 0.35x, giving it a
 3</a>. On mousemoves, the corresponding state abbreviation in the data is
 shown, and the latitude and longitude is computed by
 <a href="https://github.com/mbostock/d3/wiki/Geo-Projections#wiki-invert">inverting</a>
-the mouse position.
+the mouse position.</p>
 
 <pre><code class="javascript">
 var width = 840,
@@ -116,11 +116,14 @@ d3.json("us2.json", function(error, us) {
 </article>
 <footer>
   <p>Dana Silver / March 11, 2014</p>
+  <span class="nav">
+    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>  
+  </span>
 </footer>
 
 <img style="display:none;" src="us-map.png">
 
-<script src="/js/highlight.pack.js" charset="utf-8"></script>
+<script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>

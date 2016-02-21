@@ -3,7 +3,7 @@
 <head>
   <title>Last Letter of First Names</title>
   <link rel="stylesheet" href="/styles/silver.css">
-  <link rel="stylesheet" href="/styles/tomorrow.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
   <link href="/img/favicon.ico" rel="icon">
   <style>
   form {
@@ -181,7 +181,9 @@ femaleInput.on("change", function() { updateYear(input.node().value); });
 function updateYear(year) {
   var data = {};
   if (maleInput.property("checked") && femaleInput.property("checked")) {
-    for (key in letters[year].M) data[key] = letters[year].M[key] + letters[year].F[key];
+    for (key in letters[year].M) {
+      data[key] = letters[year].M[key] + letters[year].F[key];
+    }
   }
   else if (maleInput.property("checked")) data = letters[year].M;
   else if (femaleInput.property("checked")) data = letters[year].F;
@@ -214,9 +216,9 @@ var incrementYear = (function() { var x = 1880; return function() { return x++; 
 </code></pre>
 </article>
 
-<script src="/js/highlight.pack.js" charset="utf-8"></script>
+<script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/d3.v3.min.js" charset="utf-8"></script>
+<script src="/vendor/d3/d3.v3.min.js" charset="utf-8"></script>
 <script>
 var margin = {top: 10, right: 20, bottom: 40, left: 60},
   width = 840 - margin.left - margin.right,
@@ -337,6 +339,9 @@ var incrementYear = (function() { var x = 1880; return function() { return x++; 
 
 <footer>
   <p>Dana Silver / April 14, 2014</p>
+  <span class="nav">
+    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
+  </span>
 </footer>
 </body>
 </html>

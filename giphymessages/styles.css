@@ -3,8 +3,13 @@ header {
   border-bottom: 1px solid rgb(51, 85, 154);
 }
 
-p {
+p, h1, h2 {
   font-family: "Helvetica Neue", sans-serif;
+}
+
+.preamble h1,
+h2.description {
+  font-weight: 300;
 }
 
 a {

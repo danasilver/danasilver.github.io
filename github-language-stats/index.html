@@ -3,7 +3,7 @@
 <head>
   <title>GitHub Language Stats</title>
   <link rel="stylesheet" href="/styles/silver.css">
-  <link rel="stylesheet" href="/styles/tomorrow.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
   <link href="/img/favicon.ico" rel="icon">
   <style>
   .bar-chart div {
@@ -25,6 +25,10 @@
     fill: white;
     font-size: 10px;
     text-anchor: end;
+  }
+
+  .bar-chart {
+    font-family: "Helvetica Neue", sans-serif;
   }
   </style>
 </head>
@@ -264,9 +268,12 @@ bar.append("text")
 </article>
 <footer>
   <p>Dana Silver / December 31, 2013</p>
+  <span class="nav">
+    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
+  </span>
 </footer>
 
-<script src="/js/highlight.pack.js" charset="utf-8"></script>
+<script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script>

@@ -3,7 +3,7 @@
 <head>
   <title>Compare Historically Popular Names</title>
   <link rel="stylesheet" href="/styles/silver.css">
-  <link rel="stylesheet" href="/styles/tomorrow.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
   <link href="/img/favicon.ico" rel="icon">
 
   <style>
@@ -320,11 +320,14 @@ function makeChart(names) {
 </article>
 <footer>
   <p>Dana Silver / February 11, 2014</p>
+  <span class="nav">
+    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
+  </span>
 </footer>
 
-<script src="/js/highlight.pack.js" charset="utf-8"></script>
+<script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="/d3.v3.min.js" charset="utf-8"></script>
+<script src="/vendor/d3/d3.v3.min.js" charset="utf-8"></script>
 <script>
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");

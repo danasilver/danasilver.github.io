@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
 
 html, body {
   margin: 0;
@@ -16,12 +16,11 @@ svg {
 }
 
 a {
-  color: #0086b3;
+  color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 400;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 h1 {
@@ -29,16 +28,16 @@ h1 {
 }
 
 h2, h3, h4 {
-  margin: 20px 0 10px 0;
+  margin: 1.5em 0 .7em 0;
 }
 
 .date {
-  float: right;
   color: #999;
+  margin-bottom: -15px;
 }
 
 p {
-  line-height: 1.4;
+  line-height: 26px;
 }
 
 header > div, article, footer {
@@ -49,28 +48,41 @@ header > div, article, footer {
 header {
   height: 50px;
   width: 100%;
-  background-color: #e5e5e5;
+  line-height: 50px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
-  border-bottom: 1px solid rgb(178, 178, 178);
+  border-bottom: 2px solid rgb(178, 178, 178);
+}
+
+header:not(.index) {
+  border: none;
 }
 
 header a {
   font-size: 30px;
   text-decoration: none;
-  line-height: 50px;
   color: #000;
 }
 
-header .nav {
+header:not(.index)>div>a {
+  font-size: 16px;
+}
+
+header .nav,
+footer .nav {
   float: right;
-  line-height: 50px;
 }
 
 header .nav a {
   text-decoration: none;
   padding: 0 3px;
   font-size: 16px;
+  line-height: 50px;
+}
+
+footer .nav img.twitter {
+  height: 30px;
+  margin-top: 12px;
 }
 
 header .nav a:hover {
@@ -78,18 +90,14 @@ header .nav a:hover {
 }
 
 code {
-  font-family: Inconsolata, monospace;
-  line-height: 1em;
+  font-family: Menlo, Consolas, monospace;
+  line-height: 1.2em;
 }
 
 pre {
-  border-left: solid 3px #d9d9d9;
-  line-height: 18px;
   white-space: pre;
   overflow-x: auto;
-  padding: 0 0 0 10px;
-  line-height: 1em;
-  margin: 2em 0 2em -20px;
+  margin: 2em 0 2em -8px;
 }
 
 pre > code {
@@ -97,8 +105,12 @@ pre > code {
 }
 
 footer {
-  margin-bottom: 30px;
+  height: 60px;
   color: #999;
+}
+
+footer p {
+  float: left;
 }
 
 .posts p {

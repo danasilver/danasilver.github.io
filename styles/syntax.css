@@ -1,0 +1,73 @@
+/* One Light Syntax
+ *
+ */
+
+/* Comment */
+.hljs-comment,
+.hljs-quote {
+  color: hsl(230, 4%, 64%);
+}
+
+/* Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: hsl(5, 74%, 59%);
+}
+
+/* Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-meta,
+.hljs-link {
+  color: hsl(41, 99%, 30%);
+}
+
+/* Yellow */
+.hljs-attribute {
+  color: #eab700;
+}
+
+/* Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: hsl(119, 34%, 47%);
+}
+
+/* Blue */
+.hljs-title,
+.hljs-section {
+  color: hsl(221, 87%, 60%);
+}
+
+/* Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: hsl(301, 63%, 40%);
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: white;
+  color: hsl(230, 8%, 24%);
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
