@@ -157,11 +157,11 @@ var svg = d3.select("#names")
 <h4>Data</h4>
 
 <p>The data is hosted at
-<a href="/popular-names/names1880-2012.json">danasilver.org/popular-names/names1880-2012.json</a>.
-(The CSV has a JSON extension so GitHub Pages will gzip it.) I obtained it from
-my Computer Science Information Visualization course. I request the data with
-<a href="https://github.com/mbostock/d3/wiki/CSV">d3.csv</a>, use an accessor
-method to format each data point, and use a callback to manipulate the data.</p>
+<a href="//files.danasilver.org/names1880-2012.csv">files.danasilver.org/names1880-2012.csv</a>.
+I obtained it from my Computer Science Information Visualization course. I
+request the data with <a href="https://github.com/mbostock/d3/wiki/CSV">d3.csv</a>,
+use an accessor method to format each data point, and use a callback to
+manipulate the data.</p>
 
 <p>Saving all the loaded data to the variable <code>allData</code> makes it easy
 to make other charts based on user input without requesting the data each time.
@@ -175,7 +175,7 @@ and updates the progress bar.</p>
 
 <pre><code class="javascript">
 var allData;
-d3.csv("/popular-names/names1880-2012.json", function(d) {
+d3.csv("//files.danasilver.org/names1880-2012.csv", function(d) {
   return {
     year: new Date(+d.Year, 0, 1),
     count: +d.Count,
@@ -368,7 +368,7 @@ var svg = d3.select("#names")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var allData;
-d3.csv("/popular-names/names1880-2012.json", function(d) {
+d3.csv("//files.danasilver.org/names1880-2012.csv", function(d) {
   return {
     year: new Date(+d.Year, 0, 1),
     count: +d.Count,
