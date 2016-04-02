@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+.interactive {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  width: 1050px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+}
+
+.add-name input,
+.add-name button,
+.add-name label {
+  font-size: 16px;
+  padding: 8px 10px;
+  border: 2px solid #e5e5e5;
+  outline: none;
+}
+
+.add-name input:hover,
+.add-name input:focus,
+.add-name button:hover,
+.add-name button:focus,
+.add-name label:hover {
+  border-color: #ccc;
+}
+
+.add-name .name {
+  width: 697px;
+  margin-right: -4px;
+}
+
+.add-name .sex {
+  margin-left: 10px;
+}
+
+.add-name .sex input {
+  margin-right: 10px;
+}
+
+.add-name .add {
+  margin-left: 10px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.interactive .inputs .input-addon.checked {
+  background-color: #efefef;
+}
+
+.interactive .names .name {
+  font-size: 16px;
+  display: inline-block;
+  padding: 8px 10px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border: 2px solid #e5e5e5;
+}
+
+.interactive .names .name .remove {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.interactive svg {
+  margin-top: 10px;
+}
+
+.interactive svg .name path {
+  fill: transparent;
+  stroke-width: 2px;
+}
