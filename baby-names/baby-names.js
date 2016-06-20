@@ -1,3 +1,16 @@
+var data = {
+  names: null,
+  active: d3.set(),
+  workingSet: function() {
+    return this.active.values().map(function(key) {
+      var sex = key.charAt(0),
+          name = key.slice(1);
+
+      return data.names.get(name).get(sex);
+    });
+  }
+};
+
 d3.selectAll('input[type="checkbox"]')
   .on('click', function() {
     this.checked
@@ -5,8 +18,8 @@ d3.selectAll('input[type="checkbox"]')
       : this.parentElement.classList.remove('checked');
   });
 
-var margin = {top: 0, right: 0, bottom: 0, left: 0},
-    height = 600 - margin.top - margin.bottom,
+var margin = {top: 0, right: 10, bottom: 20, left: 40},
+    height = 500 - margin.top - margin.bottom,
     width = 1030 - margin.left - margin.right;
 
 var x = d3.time.scale()
@@ -15,6 +28,15 @@ var x = d3.time.scale()
 
 var y = d3.scale.linear()
     .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient('bottom');
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient('left')
+    .tickFormat(d3.format('s'));
 
 var color = d3.scale.category10();
 
@@ -28,17 +50,35 @@ var chart = d3.select('.interactive').append('svg')
   .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-d3.csv('//files.danasilver.org/names1880-2012.csv', type, function(names) {
-  names = d3.nest()
+chart.append('g')
+    .attr('class', 'x axis')
+    .attr('transform', 'translate(0,' + height + ')');
+
+chart.append('g')
+    .attr('class', 'y axis');
+
+var key = d3.select('div.names');
+
+d3.csv('names1880-2012.csv', type, function(names) {
+  data.names = d3.nest()
       .key(function(d) { return d.name; })
       .key(function(d) { return d.gender; })
       .map(names, d3.map);
+});
 
-  update([names.get('Pam').get('F'), names.get('Jim').get('M')]);
+d3.select('.add-name').on('submit', function() {
+  var name = d3.select('.add-name .name').node().value,
+      m = d3.select('.add-name .sex.male input').node().checked,
+      f = d3.select('.add-name .sex.female input').node().checked;
 
-  setTimeout(function() {
-    update([names.get('Pam').get('F'), names.get('Jim').get('M'), names.get('Michael').get('M'), names.get('Toby').get('M')])
-  }, 2000);
+  d3.event.preventDefault();
+
+  if (!m && !f) return flashCheckboxes();
+
+  if (m && data.names.get(name)) data.active.add('M' + name);
+  if (f && data.names.get(name)) data.active.add('F' + name);
+
+  return update(data.workingSet());
 });
 
 function update(subset) {
@@ -46,16 +86,13 @@ function update(subset) {
     return d3.max(values, function(d) { return d.count; });
   })]);
 
-  color.domain(d3.map(subset, function(d) { return d[0].key; }));
-
   var names = chart.selectAll('.name')
       .data(subset, function(d) { return d[0].key; });
 
   names
       .select('path')
       .transition()
-      .attr('d', line)
-      .style('stroke', function(d) { return color(d[0].key); });
+      .attr('d', line);
 
   names.enter().append('g')
       .attr('class', 'name')
@@ -65,6 +102,36 @@ function update(subset) {
       .style('stroke', function(d) { return color(d[0].key); });
 
   names.exit().remove();
+
+  chart.select('.x.axis')
+      .call(xAxis);
+
+  if (subset.length)
+    chart.select('.y.axis')
+        .transition()
+        .call(yAxis);
+
+  var labels = key.selectAll('.name')
+    .data(subset, function(d) { return d[0].key; });
+
+  var enteringLabels = labels.enter().append('div')
+      .attr('class', 'name')
+      .style('border-color', function(d) { return color(d[0].key); });
+
+  enteringLabels.append('span')
+      .attr('class', 'remove')
+      .html('✕')
+      .on('click', function() {
+        data.active.remove(d3.select(this).datum()[0].key);
+        return update(data.workingSet());
+      });
+
+  enteringLabels.append('span')
+      .html(function(d) {
+        return d[0].name + ' ' + (d[0].gender === 'M' ? '&male;' : '&female;');
+      });
+
+  labels.exit().remove();
 }
 
 function type(d) {
@@ -73,6 +140,16 @@ function type(d) {
     count: +d.Count,
     name: d.Name,
     gender: d.Gender,
-    key: d.Name + d.Gender
+    key: d.Gender + d.Name
   };
+}
+
+function flashCheckboxes() {
+  d3.selectAll('.sex')
+    .transition().duration(300)
+    .style('border-color', 'rgb(221, 46, 0)')
+    .transition().duration(500).delay(300)
+    .style('border-color', 'rgb(230, 230, 230)')
+    .transition()
+    .style('border-color', null);
 }

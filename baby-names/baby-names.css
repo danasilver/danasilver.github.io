@@ -7,7 +7,7 @@
   width: 1050px;
   padding: 10px;
   margin: 0 auto;
-  border: 1px solid #e5e5e5;
+  border: 1px solid rgb(230, 230, 230);
 }
 
 .add-name input,
@@ -15,7 +15,7 @@
 .add-name label {
   font-size: 16px;
   padding: 8px 10px;
-  border: 2px solid #e5e5e5;
+  border: 2px solid rgb(230, 230, 230);
   outline: none;
 }
 
@@ -46,6 +46,11 @@
   cursor: pointer;
 }
 
+div.names {
+  /* So it doesn't collapse when there are no names. */
+  height: 104px;
+}
+
 .interactive .inputs .input-addon.checked {
   background-color: #efefef;
 }
@@ -56,7 +61,7 @@
   padding: 8px 10px;
   margin-top: 10px;
   margin-right: 5px;
-  border: 2px solid #e5e5e5;
+  border: 2px solid rgb(230, 230, 230);
 }
 
 .interactive .names .name .remove {
@@ -71,4 +76,15 @@
 .interactive svg .name path {
   fill: transparent;
   stroke-width: 2px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-size: 10px;
 }
