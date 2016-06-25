@@ -6,8 +6,17 @@ var data = {
       var sex = key.charAt(0),
           name = key.slice(1);
 
-      return data.names.get(name).get(sex);
-    });
+      return this.names.get(name).get(sex);
+    }.bind(this));
+  },
+  cleanInput: function(input) {
+    return input.split(/[,\s]+/)
+    .map(function(name) {
+      return name.charAt(0).toUpperCase() + name.slice(1);
+    })
+    .filter(function(name) {
+      return data.names.get(name);
+    }.bind(this));
   }
 };
 
@@ -67,7 +76,7 @@ d3.csv('names1880-2012.csv', type, function(names) {
 });
 
 d3.select('.add-name').on('submit', function() {
-  var name = d3.select('.add-name .name').node().value,
+  var names = data.cleanInput(d3.select('.add-name .name').node().value),
       m = d3.select('.add-name .sex.male input').node().checked,
       f = d3.select('.add-name .sex.female input').node().checked;
 
@@ -75,8 +84,8 @@ d3.select('.add-name').on('submit', function() {
 
   if (!m && !f) return flashCheckboxes();
 
-  if (m && data.names.get(name)) data.active.add('M' + name);
-  if (f && data.names.get(name)) data.active.add('F' + name);
+  if (m) names.forEach(function(name) { data.active.add('M' + name); });
+  if (f) names.forEach(function(name) { data.active.add('F' + name); });
 
   return update(data.workingSet());
 });
