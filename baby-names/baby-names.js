@@ -66,6 +66,7 @@ chart.append('g')
 chart.append('g')
     .attr('class', 'y axis')
   .append('text')
+    .attr('class', 'hidden')
     .attr('transform', 'rotate(-90)')
     .attr('dy', '1em')
     .style('text-anchor', 'end')
@@ -124,6 +125,9 @@ function update(subset) {
     chart.select('.y.axis')
         .transition()
         .call(yAxis);
+
+  chart.select('.y.axis text')
+      .classed('hidden', !subset.length);
 
   var labels = key.selectAll('.name')
     .data(subset, function(d) { return d[0].key; });
