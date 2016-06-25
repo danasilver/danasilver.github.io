@@ -64,7 +64,12 @@ chart.append('g')
     .attr('transform', 'translate(0,' + height + ')');
 
 chart.append('g')
-    .attr('class', 'y axis');
+    .attr('class', 'y axis')
+  .append('text')
+    .attr('transform', 'rotate(-90)')
+    .attr('dy', '1em')
+    .style('text-anchor', 'end')
+    .text('# names');
 
 var key = d3.select('div.names');
 
@@ -125,10 +130,14 @@ function update(subset) {
 
   var enteringLabels = labels.enter().append('div')
       .attr('class', 'name')
+      .attr('title', function(d) {
+        return d[0].name + ', ' + (d[0].gender === 'M' ? 'male' : 'female');
+      })
       .style('border-color', function(d) { return color(d[0].key); });
 
   enteringLabels.append('span')
       .attr('class', 'remove')
+      .attr('title', 'Remove')
       .html('✕')
       .on('click', function() {
         data.active.remove(d3.select(this).datum()[0].key);
