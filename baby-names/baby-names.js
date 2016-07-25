@@ -1,30 +1,6 @@
-var data = {
-  names: null,
-  active: d3.set(),
-  workingSet: function() {
-    return this.active.values().map(function(key) {
-      var sex = key.charAt(0),
-          name = key.slice(1);
-
-      return this.names.get(name).get(sex);
-    }.bind(this));
-  },
-  cleanInput: function(input) {
-    return input.split(/[,\s]+/)
-    .map(function(name) {
-      return name.charAt(0).toUpperCase() + name.slice(1);
-    })
-    .filter(function(name) {
-      return data.names.get(name);
-    }.bind(this));
-  }
-};
-
 d3.selectAll('input[type="checkbox"]')
   .on('click', function() {
-    this.checked
-      ? this.parentElement.classList.add('checked')
-      : this.parentElement.classList.remove('checked');
+    d3.select(this.parentElement).classed('checked', this.checked);
   });
 
 var margin = {top: 0, right: 10, bottom: 20, left: 40},
@@ -74,13 +50,6 @@ chart.append('g')
 
 var key = d3.select('div.names');
 
-d3.csv('names1880-2012.csv', type, function(names) {
-  data.names = d3.nest()
-      .key(function(d) { return d.name; })
-      .key(function(d) { return d.gender; })
-      .map(names, d3.map);
-});
-
 d3.select('.add-name').on('submit', function() {
   var names = data.cleanInput(d3.select('.add-name .name').node().value),
       m = d3.select('.add-name .sex.male input').node().checked,
@@ -90,11 +59,10 @@ d3.select('.add-name').on('submit', function() {
 
   if (!m && !f) return flashCheckboxes();
 
-  if (m) names.forEach(function(name) { data.active.add('M' + name); });
-  if (f) names.forEach(function(name) { data.active.add('F' + name); });
-
-  return update(data.workingSet());
+  data.add(names, m, f, update);
 });
+
+data.getIndex();
 
 function update(subset) {
   y.domain([0, d3.max(subset, function(values) {
@@ -154,16 +122,6 @@ function update(subset) {
       });
 
   labels.exit().remove();
-}
-
-function type(d) {
-  return {
-    year: new Date(+d.Year, 0, 1),
-    count: +d.Count,
-    name: d.Name,
-    gender: d.Gender,
-    key: d.Gender + d.Name
-  };
 }
 
 function flashCheckboxes() {
