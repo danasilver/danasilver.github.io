@@ -58,7 +58,9 @@ var data = {
   },
 
   getIndex: function() {
-    d3.json(serviceUrl + 'index', function(err, index) {
+    return d3.json(serviceUrl + 'index')
+    .get()
+    .on('load.index', function(index) {
       var nested = d3.nest()
           .key(function(d) { return d.name; })
           .key(function(d) { return d.gender; })

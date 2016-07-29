@@ -29,10 +29,29 @@ var line = d3.svg.line()
     .x(function(d) { return x(d.year); })
     .y(function(d) { return y(d.count); });
 
-var chart = d3.select('.interactive').append('svg')
+var svg = d3.select('.interactive').append('svg')
     .attr('height', height + margin.top + margin.bottom)
     .attr('width', width + margin.left + margin.right)
-  .append('g')
+
+var loader = spinner(svg);
+var delay = 1000;
+
+setTimeout(function() {
+  data.getIndex().on('load.stopspin', function() {
+    loader.interrupt();
+    loader.remove();
+    [
+      function() { data.add(['Pam'], false, true, update); },
+      function() { data.add(['Jim', 'Stanley'], true, false, update); },
+      function() { data.add(['Phyllis'], false, true, update); },
+    ].map(function(f) {
+      setTimeout(f, delay);
+      delay *= 2;
+    });
+  });
+}, 5000);
+
+var chart = svg.append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
 chart.append('g')
@@ -62,8 +81,6 @@ d3.select('.add-name').on('submit', function() {
   data.add(names, m, f, update);
 });
 
-data.getIndex();
-
 function update(subset) {
   y.domain([0, d3.max(subset, function(values) {
     return d3.max(values, function(d) { return d.count; });
@@ -75,6 +92,7 @@ function update(subset) {
   names
       .select('path')
       .transition()
+      .style('stroke', function(d) { return color(d[0].key)})
       .attr('d', line);
 
   names.enter().append('g')
