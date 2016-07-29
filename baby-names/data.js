@@ -44,7 +44,13 @@ var data = {
       if (f) urls.push(serviceUrl + names[i] + '/F');
     }
 
-    return urls;
+    return urls.filter(function(url) {
+      var parts = url.split('/'),
+          name = parts[3],
+          gender = parts[4];
+
+      return this.index.get(name).get(gender);
+    }.bind(this));
   },
 
   cleanInput: function(input) {
