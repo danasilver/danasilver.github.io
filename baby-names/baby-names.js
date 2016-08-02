@@ -49,7 +49,7 @@ setTimeout(function() {
       delay *= 2;
     });
   });
-}, 5000);
+}, 3000);
 
 var chart = svg.append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');

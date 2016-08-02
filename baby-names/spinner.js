@@ -24,10 +24,10 @@ function spinner(selection) {
 
       d3.select(this)
           .style('stroke-dasharray', '0,' + length)
-        .transition('close')
+        .transition()
           .duration(duration)
           .style('stroke-dasharray', '1,1')
-        .transition('open')
+        .transition()
           .duration(duration)
           .style('stroke-dasharray', '0,' + length)
           .each('end', animate);
