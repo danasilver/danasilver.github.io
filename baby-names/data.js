@@ -1,4 +1,6 @@
-var serviceUrl = 'http://baby-names-service.danasilver.org/';
+var serviceUrl = location.hostname === 'localhost'
+  ? 'http://localhost:3000/'
+  : 'http://baby-names-service.danasilver.org/';
 
 var data = {
   names: d3.map(),

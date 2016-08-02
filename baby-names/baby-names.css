@@ -92,3 +92,22 @@ div.names {
 .axis text {
   font-size: 10px;
 }
+
+.overlay {
+  fill: transparent;
+}
+
+.tooltip line {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+path.area {
+  opacity: 0.2;
+  transition: opacity 0.1s linear;
+}
+
+g.name:last-of-type .area {
+  opacity: 0.6;
+  transition: opacity 0.1s linear;
+}
