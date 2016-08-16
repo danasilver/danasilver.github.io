@@ -15,6 +15,12 @@ var data = {
     }.bind(this));
   },
 
+  workingSetMax: function() {
+    return d3.max(this.workingSet(), function(values) {
+      return d3.max(values, function(d) { return d.count; });
+    });
+  },
+
   add: function(names, m, f, cb) {
     var urls = this.urls(names, m, f),
         q = d3.queue();

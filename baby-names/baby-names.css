@@ -89,6 +89,14 @@ div.names {
   shape-rendering: crispEdges;
 }
 
+.y.axis path {
+  stroke: none;
+}
+
+.y.axis line {
+  stroke: rgb(230, 230, 230);
+}
+
 .axis text {
   font-size: 10px;
 }
@@ -100,6 +108,21 @@ div.names {
 .tooltip line {
   stroke: #000;
   shape-rendering: crispEdges;
+}
+
+div.tooltip {
+  position: absolute;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+div.tooltip .name {
+  position: absolute;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  white-space: nowrap;
 }
 
 path.area {

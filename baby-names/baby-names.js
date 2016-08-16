@@ -3,7 +3,7 @@ d3.selectAll('input[type="checkbox"]')
     d3.select(this.parentElement).classed('checked', this.checked);
   });
 
-var margin = {top: 0, right: 10, bottom: 20, left: 40},
+var margin = {top: 10, right: 10, bottom: 20, left: 40},
     height = 500 - margin.top - margin.bottom,
     width = 1030 - margin.left - margin.right;
 
@@ -12,6 +12,7 @@ var x = d3.time.scale()
     .range([0, width]);
 
 var y = d3.scale.linear()
+    .domain([0, 1])
     .range([height, 0]);
 
 var xAxis = d3.svg.axis()
@@ -21,18 +22,20 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient('left')
-    .tickFormat(d3.format('s'));
+    .tickSize(-width)
+    .tickValues(d3.range(0, 1.1, 0.1))
+    .tickFormat(d3.format('.0%'));
 
 var color = d3.scale.category10();
 
 var line = d3.svg.line()
     .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.count); });
+    .y(function(d) { return y(d.count / data.workingSetMax()); });
 
 var area = d3.svg.area()
     .x(function(d) { return x(d.year); })
     .y0(height)
-    .y1(function(d) { return y(d.count); });
+    .y1(function(d) { return y(d.count / data.workingSetMax()); });
 
 var svg = d3.select('.interactive').append('svg')
     .attr('height', height + margin.top + margin.bottom)
@@ -64,13 +67,7 @@ chart.append('g')
     .attr('transform', 'translate(0,' + height + ')');
 
 chart.append('g')
-    .attr('class', 'y axis')
-  .append('text')
-    .attr('class', 'hidden')
-    .attr('transform', 'rotate(-90)')
-    .attr('dy', '1em')
-    .style('text-anchor', 'end')
-    .text('# names');
+    .attr('class', 'y axis');
 
 var linesAreas = chart.append('g');
 
@@ -80,7 +77,10 @@ var tooltip = chart.append('g')
 tooltip.append('line')
   .attr('x1', 0)
   .attr('x2', 0)
-  .attr('y1', 0);
+  .attr('y1', 0)
+  .attr('y2', height);
+
+var tooltipText = d3.select('div.tooltip');
 
 chart.append('rect')
     .attr('class', 'overlay')
@@ -91,10 +91,14 @@ chart.append('rect')
     .on("mousemove", mousemove);
 
 function mouseover() {
+  if (!data.workingSet().length) return;
+
+  tooltipText.style('display', null);
   tooltip.style("display", null);
 }
 
 function mouseout() {
+  tooltipText.style('display', 'none');
   tooltip.style("display", "none");
 }
 
@@ -107,11 +111,16 @@ function mousemove() {
       i = bisect(years, x0, 1),
       d0 = years[i - 1],
       d1 = years[i],
-      year = x0 - d0 > d1 - x0 ? d1 : d0 - 1;
+      year = x0 - d0 > d1 - x0 ? d1 : d0;
 
   var tooltipNames = data.workingSet()
     .map(function(name) {
-      return name.find(function(d) { return d.year.getFullYear() === year; });
+      return name.find(function(d) { return d.year.getFullYear() === year; }) ||
+             { name: name[0].name,
+               gender: name[0].gender,
+               year: d3.time.format('%Y').parse('' + year),
+               count: 0,
+               key: name[0].key };
     })
     .filter(function(d) { return !!d; })
     .sort(function(a, b) { return b.count - a.count; });
@@ -138,10 +147,6 @@ d3.select('.add-name').on('submit', function() {
 });
 
 function update(subset) {
-  y.domain([0, d3.max(subset, function(values) {
-    return d3.max(values, function(d) { return d.count; });
-  })]);
-
   var names = linesAreas.selectAll('.name')
       .data(subset, function(d) { return d[0].key; });
 
@@ -189,13 +194,8 @@ function update(subset) {
   chart.select('.x.axis')
       .call(xAxis);
 
-  if (subset.length)
-    chart.select('.y.axis')
-        .transition()
-        .call(yAxis);
-
-  chart.select('.y.axis text')
-      .classed('hidden', !subset.length);
+  chart.select('.y.axis')
+      .call(yAxis);
 
   var labels = key.selectAll('.name')
     .data(subset, function(d) { return d[0].key; });
@@ -224,33 +224,40 @@ function update(subset) {
   labels.exit().remove();
 }
 
-function updateTooltip(data) {
-  var lineHeight = 14,
-      textHeight = data.length * lineHeight,
-      xOffset = data.length ? x(data[0].year) : 0,
-      yOffset = Math.max(0, d3.min(data, function(d) { return y(d.count); }) - textHeight);
+function updateTooltip(tippedNames) {
+  var lineHeight = 16,
+      textHeight = tippedNames.length * lineHeight + 20,
+      xOffset = tippedNames.length ? x(tippedNames[0].year) : 0,
+      bounds = chart.node().getBoundingClientRect();
 
   tooltip
       .transition().duration(50)
-      .attr('transform', 'translate(' + xOffset + ',' + yOffset + ')');
+      .attr('transform', 'translate(' + xOffset + ',0)');
 
-  var text = tooltip.selectAll('text')
-      .data(data, function(d) { return d.key; });
+  var text = tooltipText.selectAll('.name')
+      .data(tippedNames, function(d) { return d.key; });
 
-  text.enter().append('text')
-      .attr('fill', function(d) { return color(d.key); });
+  text.enter().append('div')
+      .attr('class', 'name')
+      .style('color', function(d) { return color(d.key); });
 
-  text.attr('dx', 5)
+  text
       .transition()
-      .attr('y', function(d, i) { return i * lineHeight; })
+      .style('top', function(d, i) { return i * lineHeight + 7 + 'px'; })
       .text(function(d) { return d3.format('.2s')(d.count) + ' ' + d.name; });
 
   text.exit().remove();
 
-  tooltip.select('line')
+  var maxTooltipTextWidth = d3.max(text[0], function(d) {
+    return d.getBoundingClientRect().width + 25;
+  });
+  tooltipText
       .transition().duration(50)
-      .attr('y1', -10)
-      .attr('y2', height - yOffset);
+      .style('height', textHeight)
+      .style('top', bounds.top + window.scrollY - textHeight + 10 + 'px')
+      .style('left', bounds.left + window.scrollX + xOffset - maxTooltipTextWidth/4 + 5 + 'px')
+      .style('width', maxTooltipTextWidth + 'px')
+      .style('height', textHeight + 'px');
 }
 
 function flashCheckboxes() {
