@@ -81,15 +81,17 @@ chart.append('g')
 var linesAreas = chart.append('g');
 
 var tooltip = chart.append('g')
-    .attr('class', 'tooltip');
+    .attr('class', 'tooltip')
+    .style('display', 'none');
 
 tooltip.append('line')
-  .attr('x1', 0)
-  .attr('x2', 0)
-  .attr('y1', 0)
-  .attr('y2', height);
+    .attr('x1', 0)
+    .attr('x2', 0)
+    .attr('y1', 0)
+    .attr('y2', height);
 
-var tooltipText = d3.select('div.tooltip');
+var tooltipText = d3.select('div.tooltip')
+    .style('display', 'none');
 
 chart.append('rect')
     .attr('class', 'overlay')
