@@ -45,14 +45,23 @@ var loader = spinner(svg);
 var delay = 1000;
 
 setTimeout(function() {
-  data.getIndex().on('load.stopspin', function() {
-    loader.interrupt();
-    loader.remove();
-    [
+  var hash = window.location.hash,
+      toAdd = [];
+
+  if (hash.length) {
+    toAdd = [data.namesFromHash(hash, update)];
+  } else {
+    toAdd = [
       function() { data.add(['Pam'], false, true, update); },
       function() { data.add(['Jim', 'Stanley'], true, false, update); },
       function() { data.add(['Phyllis'], false, true, update); },
-    ].map(function(f) {
+    ];
+  }
+
+  data.getIndex().on('load.stopspin', function() {
+    loader.interrupt();
+    loader.remove();
+    toAdd.map(function(f) {
       setTimeout(f, delay);
       delay *= 2;
     });
@@ -222,6 +231,8 @@ function update(subset) {
       });
 
   labels.exit().remove();
+
+  window.location.hash = subset.map(function(name) { return name[0].key; }).join(',');
 }
 
 function updateTooltip(tippedNames) {

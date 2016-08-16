@@ -82,6 +82,23 @@ var data = {
 
       this.index = nested;
     }.bind(this));
+  },
+
+  namesFromHash: function(hash, cb) {
+    var names = hash.match(/#?(.+)/)[1].split(',').map(function(name) {
+      return {
+        name: name.slice(1),
+        gender: name.charAt(0),
+      };
+    });
+
+    var mNames = names.filter(function(name) { return name.gender === 'M'; }).map(function(name) { return name.name; }),
+        fNames = names.filter(function(name) { return name.gender === 'F'; }).map(function(name) { return name.name; });
+
+    return function() {
+      data.add(mNames, true, false, cb);
+      data.add(fNames, false, true, cb);
+    };
   }
 };
 
