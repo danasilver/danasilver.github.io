@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Georgia, serif;
+}
+
+svg {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2, h3, h4 {
+  margin: 1.5em 0 .7em 0;
+}
+
+.date {
+  color: #999;
+  margin-bottom: -15px;
+}
+
+p {
+  line-height: 26px;
+}
+
+header > div, article, footer {
+  margin: auto;
+  width: 840px;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 300;
+  border-bottom: 2px solid rgb(178, 178, 178);
+}
+
+header:not(.index) {
+  border: none;
+}
+
+header a {
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+}
+
+header:not(.index)>div>a {
+  font-size: 16px;
+}
+
+header .nav,
+footer .nav {
+  float: right;
+}
+
+header .nav a {
+  text-decoration: none;
+  padding: 0 3px;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+footer .nav img.twitter {
+  height: 30px;
+  margin-top: 12px;
+}
+
+header .nav a:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: Menlo, Consolas, monospace;
+  line-height: 1.2em;
+}
+
+pre {
+  white-space: pre;
+  overflow-x: auto;
+  margin: 2em 0;
+}
+
+pre > code {
+  margin-top: -1em;
+}
+
+footer {
+  height: 60px;
+  color: #999;
+}
+
+footer p {
+  float: left;
+}
+
+.posts p {
+  margin: 0 0 5px 0;
+}
+
+.posts ul {
+  padding: 0;
+}
+
+.posts a {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-decoration: none;
+}
+
+.posts a:hover .title {
+  text-decoration: underline;
+}
+
+.posts li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.posts .date {
+  display: inline-block;
+  float: right;
+  text-align: right;
+}
+
+article.resume p {
+  margin: 0 0 5px;
+}
+
+article.resume ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+section {
+  margin: 25px 0;
+}
+
+.subsection {
+  margin: 20px 0 10px 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
