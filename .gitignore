@@ -1,3 +1,6 @@
 .DS_STORE
-_site
+
 *.sublime-*
+
+public/
+_site/
