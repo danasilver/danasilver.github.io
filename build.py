@@ -16,6 +16,7 @@ IGNORED_FILES = [
     'README.md',
     'site_',
     '.git',
+    'requirements.txt',
 ]
 
 STATIC_PATHS = [
@@ -36,7 +37,7 @@ STATIC_EXTENSIONS = [
     'json',
     'csv',
     'pdf',
-    'CNAME'
+    'CNAME',
 ]
 
 class StaticsAndIgnoresSite(Site):
