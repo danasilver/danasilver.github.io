@@ -14,9 +14,10 @@ ENCODING = 'utf8'
 IGNORED_FILES = [
     'build.py',
     'README.md',
-    'site_',
+    '_site',
     '.git',
     'requirements.txt',
+    'includes',
 ]
 
 STATIC_PATHS = [
@@ -44,6 +45,9 @@ class StaticsAndIgnoresSite(Site):
     def is_static(self, filename):
         if super(StaticsAndIgnoresSite, self).is_static(filename):
             return True
+        elif '_site' in filename:
+            # Don't copy static files within an already built site.
+            return False
         else:
             return any(filename.endswith(extension) for extension in STATIC_EXTENSIONS)
 
