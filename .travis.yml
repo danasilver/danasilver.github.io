@@ -5,3 +5,12 @@ install:
   - pip install -r requirements.txt
 script:
   - python build.py
+deploy:
+  on:
+    branch: master
+  provider: s3
+  access_key_id: $S3_ACCESS_KEY_ID
+  secret_access_key: $S3_SECRET_ACCESS_KEY
+  bucket: danasilver.org
+  skip_cleanup: true
+  local_dir: _site
