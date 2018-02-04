@@ -1,49 +1,37 @@
-<!doctype html>
-<html>
-<head>
-  <title>GitHub Language Stats</title>
-  <link rel="stylesheet" href="/styles/silver.css">
-  <link rel="stylesheet" href="/styles/syntax.css">
-  <link href="/img/favicon.ico" rel="icon">
-  <style>
-  .bar-chart div {
-    background-color: #0086b3;
-    text-align: right;
-    padding: 3px;
-    margin: 1px !important;
-    color: white;
-    font-size: 10px;
-  }
-  svg {
-    margin: 10px 0;
-  }
-  .bar-chart-svg rect {
-    fill: #0086b3;
-  }
+{% extends "templates/_base.html" %}
 
-  .bar-chart-svg text {
-    fill: white;
-    font-size: 10px;
-    text-anchor: end;
-  }
+{% block title %}GitHub Language Stats{% endblock %}
 
-  .bar-chart {
-    font-family: "Helvetica Neue", sans-serif;
-  }
-  </style>
-</head>
-<body>
-<header>
-  <div>
-    <a href="/">Dana Silver</a>
-    <span class="nav">
-      <a href="https://twitter.com/DanaRSilver">@DanaRSilver</a>
-      <a href="https://www.github.com/danasilver">GitHub</a>
-      <a href="/resume">Resume</a>
-    </span>
-  </div>
-</header>
+{% block styles %}
+<style>
+.bar-chart div {
+  background-color: #0086b3;
+  text-align: right;
+  padding: 3px;
+  margin: 1px !important;
+  color: white;
+  font-size: 10px;
+}
+svg {
+  margin: 10px 0;
+}
+.bar-chart-svg rect {
+  fill: #0086b3;
+}
 
+.bar-chart-svg text {
+  fill: white;
+  font-size: 10px;
+  text-anchor: end;
+}
+
+.bar-chart {
+  font-family: "Helvetica Neue", sans-serif;
+}
+</style>
+{% endblock %}
+
+{% block content %}
 <article>
 <p class="date">April 14, 2014</p>
 <h1>GitHub Language Stats with D3.js</h1>
@@ -394,20 +382,4 @@ function makeChart(languageJSON) {
       .text(function(d) { return d.bytes; });
 }
 </script>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  var pluginUrl =
-   '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-46756115-1']);
-  _gaq.push(['_setDomainName', 'danasilver.org']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-</body>
-</html>
+{% endblock %}

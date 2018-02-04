@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>{% block title %}Dana Silver{% endblock %}</title>
+  <link rel="stylesheet" href="/styles/silver.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
+  <link href="/img/favicon.ico" rel="icon">
+  {% block styles %}
+  {% endblock %}
+</head>
+<body>
+<header>
+  <div>
+    <a href="/">Dana Silver</a>
+    <span class="nav">
+      <a href="https://twitter.com/DanaRSilver">@DanaRSilver</a>
+      <a href="https://www.github.com/danasilver">GitHub</a>
+      <a href="/resume">Resume</a>
+    </span>
+  </div>
+</header>
+{% block content %}
+{% endblock %}
+{% include "includes/analytics.html" %}
+</body>
+</html>
