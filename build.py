@@ -43,8 +43,9 @@ class StaticsAndIgnoresSite(Site):
     def is_static(self, filename):
         if super(StaticsAndIgnoresSite, self).is_static(filename):
             return True
-        elif OUT_PATH in filename:
-            # Don't copy static files within an already built site.
+        elif self.is_ignored(filename):
+            # Don't copy files that look like static files
+            # but should be ignored.
             return False
         else:
             return any(filename.endswith(extension)
