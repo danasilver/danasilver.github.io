@@ -1,10 +1,8 @@
-<!doctype html>
-<html>
-<head>
-  <title>Last Letter of First Names</title>
-  <link rel="stylesheet" href="/styles/silver.css">
-  <link rel="stylesheet" href="/styles/syntax.css">
-  <link href="/img/favicon.ico" rel="icon">
+{% extends "templates/_base.html" %}
+
+{% block title %}Last Letter of First Names{% endblock %}
+
+{% block styles %}
   <style>
   form {
     font-weight: 300;
@@ -35,19 +33,9 @@
     shape-rendering: crispEdges;
   }
   </style>
-</head>
-<body>
-<header>
-  <div>
-    <a href="/">Dana Silver</a>
-    <span class="nav">
-      <a href="https://twitter.com/DanaRSilver">@DanaRSilver</a>
-      <a href="https://www.github.com/danasilver">GitHub</a>
-      <a href="/resume">Resume</a>
-    </span>
-  </div>
-</header>
+{% endblock %}
 
+{% block content %}
 <article>
 <p class="date">April 14, 2014</p>
 <h1>Last Letter of First Names</h1>
@@ -319,21 +307,6 @@ var demo = setInterval(function() {
 var incrementYear = (function() { var x = 1880; return function() { return x++; }})();
 });
 </script>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  var pluginUrl =
-   '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-46756115-1']);
-  _gaq.push(['_setDomainName', 'danasilver.org']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 <img src="last-letter.png" style="display:none;">
 </article>
 
@@ -343,5 +316,4 @@ var incrementYear = (function() { var x = 1880; return function() { return x++; 
     <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
   </span>
 </footer>
-</body>
-</html>
+{% endblock %}
