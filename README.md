@@ -1,5 +1,7 @@
 ## danasilver.org
 
+[![Build Status](https://travis-ci.org/danasilver/danasilver.github.io.svg?branch=master)](https://travis-ci.org/danasilver/danasilver.github.io)
+
 The development repository for [www.danasilver.org](https://www.danasilver.org).
 
 ### Develop
