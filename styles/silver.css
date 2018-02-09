@@ -63,8 +63,7 @@ header > div > a {
   font-size: 16px;
 }
 
-header .nav,
-footer .nav {
+header .nav {
   float: right;
 }
 
@@ -73,11 +72,6 @@ header .nav a {
   padding: 0 3px;
   font-size: 16px;
   line-height: 50px;
-}
-
-footer .nav img.twitter {
-  height: 30px;
-  margin-top: 12px;
 }
 
 header .nav a:hover {
