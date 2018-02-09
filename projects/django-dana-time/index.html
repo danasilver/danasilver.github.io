@@ -2,6 +2,8 @@
 
 {% block title %}Django Dana Time{% endblock %}
 
+{% set date = "February 2, 2014" %}
+
 {% block styles %}
   <style>
   table {
@@ -126,9 +128,7 @@ examples below for full details.</p>
 
 </article>
 
-<footer>
-  <p>Dana Silver / February 2, 2014</p>
-</footer>
+{% include "includes/footer.html" %}
 
 <script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>

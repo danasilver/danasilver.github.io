@@ -2,6 +2,8 @@
 
 {% block title %}Compare Historically Popular Names{% endblock %}
 
+{% set date = "February 11, 2014" %}
+
 {% block styles %}
   <style>
   #names {
@@ -304,12 +306,8 @@ function makeChart(names) {
 }
 </code></pre>
 </article>
-<footer>
-  <p>Dana Silver / February 11, 2014</p>
-  <span class="nav">
-    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
-  </span>
-</footer>
+
+{% include "includes/footer.html" %}
 
 <script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>

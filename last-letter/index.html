@@ -2,6 +2,8 @@
 
 {% block title %}Last Letter of First Names{% endblock %}
 
+{% set date = "April 14, 2014" %}
+
 {% block styles %}
   <style>
   form {
@@ -309,11 +311,5 @@ var incrementYear = (function() { var x = 1880; return function() { return x++; 
 </script>
 <img src="last-letter.png" style="display:none;">
 </article>
-
-<footer>
-  <p>Dana Silver / April 14, 2014</p>
-  <span class="nav">
-    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
-  </span>
-</footer>
+{% include "includes/footer.html" %}
 {% endblock %}

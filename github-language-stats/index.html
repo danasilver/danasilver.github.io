@@ -2,6 +2,8 @@
 
 {% block title %}GitHub Language Stats{% endblock %}
 
+{% set date = "December 31, 2013" %}
+
 {% block styles %}
 <style>
 .bar-chart div {
@@ -254,12 +256,8 @@ bar.append("text")
     .text(function(d) { return d.bytes; });
 </code></pre>
 </article>
-<footer>
-  <p>Dana Silver / December 31, 2013</p>
-  <span class="nav">
-    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
-  </span>
-</footer>
+
+{% include "includes/footer.html" %}
 
 <script src="/vendor/highlight/highlight.pack.js" charset="utf-8"></script>
 <script>hljs.initHighlightingOnLoad();</script>

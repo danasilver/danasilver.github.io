@@ -2,6 +2,8 @@
 
 {% block title %}Sochi 2014 Athletes{% endblock %}
 
+{% set date = "February 25, 2014" %}
+
 {% block styles %}
 <style>
 p > img {
@@ -97,11 +99,5 @@ ggplot(athletes_country, aes(country, fill=sport, alpha=gender)) +
 
 <p>This chart attempts to answer the question of gender disparity by country. Some of this disparity arises due to the sport. For example, Ice Hockey teams are large at 25 players and make up a sizable portion of a country’s representation, especially if that representation is proportionally small. In the previous chart, it was clear that Austria and Norway, the sixth and seventh most represented countries respectively, had a much higher male to female ratio than the first five countries. In this sport and gender based breakdown, it is obvious this disparity arises in part because the top five countries have both men’s and women’s Ice Hockey teams, while Austria and Norway only have men’s teams. For the most part, those countries’ other sports are similarly split between men and women. This chart reveals that Japan has a women’s hockey team, but not a men’s. This is why Japan sent more women than men to the Olympics. This chart also reveals how many athletes from each country participate in each sport. Some examples of this are that most of Netherlands’s athletes are speed skaters and that most of Denmark’s are curlers (10 out of 12 to be precise). This data is somewhat difficult to read, however, due to the similarity in color between some of the sports, which arises because of the number of sports. Examining fewer countries in more physical space might fix this problem.</p>
 </article>
-
-<footer>
-  <p>Dana Silver / February 25, 2014</p>
-  <span class="nav">
-    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
-  </span>
-</footer>
+{% include "includes/footer.html" %}
 {% endblock %}

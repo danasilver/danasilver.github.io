@@ -1,5 +1,9 @@
 {% extends "templates/_base.html" %}
 
+{% block title %}Middlebury Menu Extension{% endblock %}
+
+{% set date = "January 14, 2014" %}
+
 {% block styles %}
   <style>
     button {
@@ -80,9 +84,7 @@ The code can be found on
 
 </article>
 
-<footer>
-  <p>Dana Silver / January 14, 2014</p>
-</footer>
+{% include "includes/footer.html" %}
 
 <script>
 var installedText = document.getElementById("extensionInstalled")
