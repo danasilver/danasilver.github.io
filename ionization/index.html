@@ -2,6 +2,8 @@
 
 {% block title %}First Ionization Energies{% endblock %}
 
+{% set date = "March 10, 2014" %}
+
 {% block styles %}
   <style>
   svg {
@@ -212,12 +214,7 @@ d3.json("i1.json", function(error, data) {
 </code></pre>
 </article>
 
-<footer>
-  <p>Dana Silver / March 10, 2014</p>
-  <span class="nav">
-    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
-  </span>
-</footer>
+{% include "includes/footer.html" %}
 
 <img style="display:none;" src="i1.png">
 

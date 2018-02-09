@@ -2,6 +2,8 @@
 
 {% block title %}Map of the U.S.{% endblock %}
 
+{% set date = "March 11, 2014" %}
+
 {% block styles %}
   <style>
   .state {
@@ -102,12 +104,6 @@ d3.json("us2.json", function(error, us) {
 });
 </code></pre>
 </article>
-<footer>
-  <p>Dana Silver / March 11, 2014</p>
-  <span class="nav">
-    <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>  
-  </span>
-</footer>
 
 <img style="display:none;" src="us-map.png">
 
@@ -166,4 +162,5 @@ d3.json("us2.json", function(error, us) {
       .attr("dy", ".35em");
 });
 </script>
+{% include "includes/footer.html" %}
 {% endblock %}
