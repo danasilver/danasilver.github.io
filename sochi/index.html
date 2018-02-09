@@ -1,29 +1,17 @@
-<!doctype html>
-<html>
-<head>
-<title>Sochi 2014 Athletes</title>
-<link rel="stylesheet" href="/styles/silver.css">
-<link rel="stylesheet" href="/styles/syntax.css">
-<link href="/img/favicon.ico" rel="icon">
+{% extends "templates/_base.html" %}
+
+{% block title %}Sochi 2014 Athletes{% endblock %}
+
+{% block styles %}
 <style>
 p > img {
   margin: auto;
   text-align: center
 }
 </style>
-</head>
-<body>
-<header>
-  <div>
-    <a href="/">Dana Silver</a>
-    <span class="nav">
-      <a href="https://twitter.com/DanaRSilver">@DanaRSilver</a>
-      <a href="https://www.github.com/danasilver">GitHub</a>
-      <a href="/resume">Resume</a>
-    </span>
-  </div>
-</header>
+{% endblock %}
 
+{% block content %}
 <article>
 <p class="date">February 25, 2014</p>
 <h1>Sochi 2014 Athletes</h1>
@@ -116,20 +104,4 @@ ggplot(athletes_country, aes(country, fill=sport, alpha=gender)) +
     <a href="https://twitter.com/DanaRSilver"><img class="twitter" src="/img/TwitterLogo.png"></a>
   </span>
 </footer>
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  var pluginUrl =
-   '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
-  _gaq.push(['_setAccount', 'UA-46756115-1']);
-  _gaq.push(['_setDomainName', 'danasilver.org']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-</body>
-</html>
+{% endblock %}
