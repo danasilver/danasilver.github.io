@@ -1,7 +1,5 @@
 ## danasilver.org
 
-[![Build Status](https://travis-ci.org/danasilver/danasilver.github.io.svg?branch=master)](https://travis-ci.org/danasilver/danasilver.github.io)
-
 The development repository for [www.danasilver.org](https://www.danasilver.org).
 
 ### Develop
@@ -28,7 +26,7 @@ Push to master to deploy.
 
 #### How Deployment Works
 
-Push to master triggers a build on
-[Travis CI](https://travis-ci.org/danasilver/danasilver.github.io).
-If the build completes successfully, Travis uploads the generated site to S3.
-The S3 bucket is fronted by AWS Cloudfront.
+Push to master triggers a
+[GitHub Action](https://github.com/danasilver/danasilver.github.io/actions/workflows/deploy-to-s3.yaml),
+which builds the static site, uploads to S3, and invalidates the Cloudfront distribution.
+
