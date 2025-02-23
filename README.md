@@ -4,6 +4,12 @@ The development repository for [www.danasilver.org](https://www.danasilver.org).
 
 ### Develop
 
+Activate a [venv](https://docs.python.org/3/library/venv.html):
+
+```sh
+. venv/bin/activate
+```
+
 Install the requirements to build the site:
 
 ```sh
@@ -14,11 +20,18 @@ The site is templated with [Jinja2](http://jinja.pocoo.org/) and generated using
 [staticjinja](https://staticjinja.readthedocs.io/en/latest/). Build the site with:
 
 ```sh
-python build.py
+python3 build.py
 ```
 
 The generated site is in `_site/`.
-Run an HTTP server from that directory for a preview.
+
+Run an HTTP server from that directory for a preview:
+
+```sh
+python3 -m http.server
+```
+
+And open http://localhost:8000 to view the rendered site.
 
 ### Deploy
 

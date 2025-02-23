@@ -16,6 +16,7 @@ IGNORED_FILES = [
     'README.md',
     'requirements.txt',
     '_site',
+    'venv',
 ]
 
 STATIC_PATHS = [
