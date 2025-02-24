@@ -4,7 +4,7 @@
   <title>Dana Silver</title>
   <link rel="stylesheet" href="/styles/silver.css">
   <link rel="stylesheet" href="/styles/syntax.css">
-  <link href="/img/favicon.ico" rel="icon">
+  {% include "includes/favicon.html" %}
 
   <style>
     body {
@@ -13,6 +13,7 @@
     }
 
     main {
+      width: 100%;
       height: 100%;
       margin: 0 auto;
       font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -35,7 +36,7 @@
       margin-right: 20px;
     }
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 1300px) {
       main {
         width: 800px;
       }
