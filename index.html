@@ -1,106 +1,186 @@
-{% extends "templates/_base.html" %}
+<!doctype html>
+<html>
+<head>
+  <title>Dana Silver</title>
+  <link rel="stylesheet" href="/styles/silver.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
+  <link href="/img/favicon.ico" rel="icon">
 
-{% block title %}Dana Silver{% endblock %}
+  <style>
+    body {
+      height: 100%;
+      background-color: #eee;
+    }
 
-{% block styles %}
-<style>
-  header {
-    border-bottom: 2px solid rgb(178, 178, 178);
-  }
+    main {
+      width: 800px;
+      height: 100%;
+      margin: 0 auto;
+      font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+    .left {
+      top: 0;
+      position: fixed;
+      width: 400px;
+      height: inherit;
+      float: left;
+      background-image: url("./img/splash/1.jpeg");
+      color: #eee;
+    }
+
+    .left li {
+      padding: 12px 0;
+      font-size: 12pt;
+      font-weight: 600;
+      list-style: none;
+    }
+
+    .right {
+      float: right;
+      width: 50%;
+      height: inherit;
+    }
+
+    .right ul {
+      margin-top: 164px;
+    }
+
+    .right li {
+      list-style: none;
+    }
+
+    .right a {
+      text-decoration: none;
+    }
+
+    .right .date {
+      font-size: 11pt;
+    }
+    
+    .right .title {
+      text-decoration: underline;
+      display: block;
+    }
+
+    h1 {
+      margin: 40px;
+      font-size: 40pt;
+      font-weight: 800;
+    }
+
+    .left li a {
+      color: inherit;
+    }
+
+    main > .right > footer {
+      display: inline-block;
+      width: auto;
+      padding: 20px 0 0 40px;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="left">
+      <h1>Dana Silver</h1>
+      <ul>
+        <li><a target="_blank" href="/resume/dana-silver-resume.pdf">Resume</a></li>
+        <li><a target="_blank" href="https://github.com/danasilver">GitHub</a></li>
+        <li><a target="_blank" href="https://linkedin.com/in/danarsilver">LinkedIn</a></li>
+        <li><a target="_blank" href="https://crosswordr.com/dana">Crosswords</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <ul>
+        <a href="https://firebase.blog/posts/2023/06/feature-flags-with-real-time-remote-config/"><li>
+          <p>
+            <span class="date">June 7, 2023</span>
+            <span class="title">Firebase Blog: Remote Config real-time updates <i>(co-author)</i></span>
+          </p>
+        </li></a>
+
+        <a href="https://www.youtube.com/watch?v=vWJ8wDzeEg0"><li>
+          <p>
+            <span class="date">May 10, 2023</span>
+            <span class="title">Google I/O: Ship faster with feature flags</span>
+          </p>
+        </li></a>
+
+        <a href="https://firebase.blog/posts/2023/04/maximize-revenue-with-remote-config-personalization/"><li>
+          <p>
+            <span class="date">April 11, 2023</span>
+            <span class="title">Firebase Blog: Maximizing Revenue with Personalization</span>
+          </p>
+        </li></a>
+
+        <a href="/thesis/thesis.pdf"><li>
+          <p>
+            <span class="date">May 23, 2016</span>
+            <span class="title">MiddGuard: Collaborative and Extensible Visual Analytics</span>
+          </p>
+        </li></a>
   
-  /* Needs specificity to override default style. */
-  header > div > a {
-    font-size: 30px;
-  }
-</style>
-{% endblock %}
-
-{% block content %}
-  <article>
-  <div class="splash"><img src="/img/tetons.jpg"></div>
-  <div class="posts">
-    <ul>
-      <a href="/thesis/thesis.pdf"><li>
-        <p><span class="title">MiddGuard: Collaborative and Extensible Visual Analytics</span>
-        <span class="date">May 23, 2016</span></p>
-        <img src="/img/middguard.png">
-      </li></a>
-
-      <a href="http://twacker.danasilver.org"><li>
-        <p><span class="title">Twacker</span>
-        <span class="date">Feb 17, 2016</span></p>
-        <img src="/img/twacker.png">
-      </li></a>
-
-      <a href="/giphymessages"><li>
-        <p><span class="title">Giphy Messages</span>
-        <span class="date">August 27, 2015</span></p>
-        <img src="/img/giphymessages.png">
-      </li></a>
-
-      <a href="/middcourses/presentation"><li>
-        <p><span class="title">MiddCourses Presentation</span>
-        <span class="date">September 6, 2014</span></p>
-        <img src="/img/middcourses-presentation.png">
-      </li></a>
-
-      <a href="/last-letter"><li>
-        <p><span class="title">Last Letter of First Names</span>
-        <span class="date">April 18, 2014</span></p>
-        <img src="/img/last-letter.png">
-      </li></a>
-
-      <a href="/us-map"><li>
-        <p><span class="title">Map of the U.S.</span>
-        <span class="date">March 11, 2014</span></p>
-        <img src="/img/us-map.png">
-      </li></a>
-
-      <a href="/ionization"><li>
-        <p><span class="title">First Ionization Energies</span>
-        <span class="date">March 10, 2014</span></p>
-        <img src="/img/i1.png">
-      </li></a>
-
-      <a href="/sochi"><li>
-        <p><span class="title">Sochi 2014 Athletes</span>
-        <span class="date">February 25, 2014</span></p>
-        <img src="/img/sochi.png">
-      </li></a>
-
-      <a href="/popular-names"><li>
-        <p><span class="title">Compare Historically Popular Names</span>
-        <span class="date">February 11, 2014</span></p>
-        <img src="/img/popular-names.png">
-      </li></a>
-
-      <a href="/github-language-stats"><li>
-        <p><span class="title">GitHub Language Stats</span>
-        <span class="date">December 31, 2013</span></p>
-        <img src="/img/github-language-stats.png">
-      </li></a>
-    </ul>
-  </div>
-
-  <div class="posts">
-    <h2>Projects</h2>
-    <ul>
-      <a href="/projects/django-dana-time"><li>
-        <p><b class="title">Django Dana Time</b></p>
-        <p>Compact, easy to read date-time formatting for Django.</p>
-      </li></a>
-
-      <a href="/projects/midd-menu-api"><li>
-        <p><b class="title">Middlebury Menu API</b></p>
-        <p>A RESTful API for the Middlebury College online menu. Serves as the
-        foundation for the Middlebury Menu App.</p>
-      </li></a>
-
-      <a href="/projects/middlebury-menu-extension"><li>
-        <p><b class="title">Middlebury Menu Extension</b></p>
-        <p>A Google Chrome extension to clean up the Middlebury menu.</p>
-      </li></a>
-    </ul>
-  </div>
-  </article>
-{% endblock %}
+        <a href="/giphymessages"><li>
+          <p>
+            <span class="date">August 27, 2015</span>
+            <span class="title">Giphy Messages</span>
+          </p>
+        </li></a>
+  
+        <a href="/middcourses/presentation"><li>
+          <p>
+            <span class="date">September 6, 2014</span>
+            <span class="title">MiddCourses Presentation</span>
+          </p>
+        </li></a>
+  
+        <a href="/last-letter"><li>
+          <p>
+            <span class="date">April 18, 2014</span>
+            <span class="title">Last Letter of First Names</span>
+          </p>
+        </li></a>
+  
+        <a href="/us-map"><li>
+          <p>
+            <span class="date">March 11, 2014</span>
+            <span class="title">Map of the U.S.</span>
+          </p>
+        </li></a>
+  
+        <a href="/ionization"><li>
+          <p>
+            <span class="date">March 10, 2014</span>
+            <span class="title">First Ionization Energies</span>
+          </p>
+        </li></a>
+  
+        <a href="/sochi"><li>
+          <p>
+            <span class="date">February 25, 2014</span>
+            <span class="title">Sochi 2014 Athletes</span>
+          </p>
+        </li></a>
+  
+        <a href="/popular-names"><li>
+          <p>
+            <span class="date">February 11, 2014</span>
+            <span class="title">Compare Historically Popular Names</span>
+          </p>
+        </li></a>
+  
+        <a href="/github-language-stats"><li>
+          <p>
+            <span class="date">December 31, 2013</span>
+            <span class="title">GitHub Language Stats</span>
+          </p>
+        </li></a>
+      </ul>
+      <footer>&copy; 2025 Dana Silver</footer>
+    </div>
+  </main>
+{% include "includes/analytics.html" %}
+</body>
+</html>
