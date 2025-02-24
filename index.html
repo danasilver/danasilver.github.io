@@ -13,38 +13,59 @@
     }
 
     main {
-      width: 800px;
       height: 100%;
       margin: 0 auto;
       font-family: "Open Sans", "Helvetica Neue", sans-serif;
     }
 
     .left {
-      top: 0;
-      position: fixed;
-      width: 400px;
-      height: inherit;
-      float: left;
+      position: relative;
+      width: auto;
       background-image: url("./img/splash/1.jpeg");
       color: #eee;
+      padding: 20px 0;
     }
 
     .left li {
-      padding: 12px 0;
       font-size: 12pt;
       font-weight: 600;
       list-style: none;
+      display: inline;
+      padding: 20px 0;
+      margin-right: 20px;
     }
 
-    .right {
-      float: right;
-      width: 50%;
-      height: inherit;
+    @media screen and (min-width: 800px) {
+      main {
+        width: 800px;
+      }
+
+      .left {
+        top: 0;
+        position: fixed;
+        width: 400px;
+        height: inherit;
+        float: left;
+      }
+
+      .left li {
+        padding: 12px 0;
+        display: block;
+        margin-right: none;
+      }
+
+      .right {
+        float: right;
+        width: 50%;
+        height: inherit;
+      }
+
+      .right ul {
+        margin-top: 164px;
+      }
     }
 
-    .right ul {
-      margin-top: 164px;
-    }
+    
 
     .right li {
       list-style: none;
