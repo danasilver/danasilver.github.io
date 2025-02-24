@@ -100,6 +100,24 @@
       padding: 20px 0 0 40px;
       font-size: 10pt;
     }
+
+    .right img {
+      width: 400px;
+      height: 150px;
+      overflow: hidden;
+      filter: grayscale(1);
+      object-fit: cover;
+      object-position: 0 0;
+    }
+
+    .right li:hover img {
+      filter: none;
+      transition: filter 0.25s ease-in-out;
+    }
+
+    .right li:not(:hover) img {
+      transition: filter 0.25s ease-in-out;
+    }
   </style>
 </head>
 <body>
@@ -119,6 +137,7 @@
           <p>
             <span class="date">June 7, 2023</span>
             <span class="title">Firebase Blog: Remote Config real-time updates <i>(co-author)</i></span>
+            <img src="/img/firebase-rc-real-time-blog.png">
           </p>
         </li></a>
 
@@ -126,6 +145,7 @@
           <p>
             <span class="date">May 10, 2023</span>
             <span class="title">Google I/O: Ship faster with feature flags</span>
+            <img src="/img/google-io.png">
           </p>
         </li></a>
 
@@ -133,6 +153,7 @@
           <p>
             <span class="date">April 11, 2023</span>
             <span class="title">Firebase Blog: Maximizing Revenue with Personalization</span>
+            <img src="/img/firebase-personalization.png">
           </p>
         </li></a>
 
@@ -140,6 +161,7 @@
           <p>
             <span class="date">May 23, 2016</span>
             <span class="title">MiddGuard: Collaborative and Extensible Visual Analytics</span>
+            <img src="/img/middguard.png">
           </p>
         </li></a>
   
@@ -147,6 +169,7 @@
           <p>
             <span class="date">August 27, 2015</span>
             <span class="title">Giphy Messages</span>
+            <img src="/img/giphymessages.png">
           </p>
         </li></a>
   
@@ -154,6 +177,7 @@
           <p>
             <span class="date">September 6, 2014</span>
             <span class="title">MiddCourses Presentation</span>
+            <img src="/img/middcourses-presentation.png">
           </p>
         </li></a>
   
@@ -161,6 +185,7 @@
           <p>
             <span class="date">April 18, 2014</span>
             <span class="title">Last Letter of First Names</span>
+            <img src="/img/last-letter.png">
           </p>
         </li></a>
   
@@ -168,6 +193,7 @@
           <p>
             <span class="date">March 11, 2014</span>
             <span class="title">Map of the U.S.</span>
+            <img src="/img/us-map.png">
           </p>
         </li></a>
   
@@ -175,6 +201,7 @@
           <p>
             <span class="date">March 10, 2014</span>
             <span class="title">First Ionization Energies</span>
+            <img src="/img/i1.png">
           </p>
         </li></a>
   
@@ -182,6 +209,7 @@
           <p>
             <span class="date">February 25, 2014</span>
             <span class="title">Sochi 2014 Athletes</span>
+            <img src="/img/sochi.png">
           </p>
         </li></a>
   
@@ -189,6 +217,7 @@
           <p>
             <span class="date">February 11, 2014</span>
             <span class="title">Compare Historically Popular Names</span>
+            <img src="/img/popular-names.png">
           </p>
         </li></a>
   
@@ -196,10 +225,15 @@
           <p>
             <span class="date">December 31, 2013</span>
             <span class="title">GitHub Language Stats</span>
+            <img src="/img/github-language-stats.png">
           </p>
         </li></a>
       </ul>
-      <footer>&copy; 2025 Dana Silver</footer>
+      <footer>
+        &copy; 2025 Dana Silver
+        <br>
+        Firebase Blog and Google I/O images &copy; Google, Inc.
+      </footer>
     </div>
   </main>
 {% include "includes/analytics.html" %}
