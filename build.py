@@ -31,6 +31,8 @@ STATIC_EXTENSIONS = [
     'gif',
     'json',
     'png',
+    'jpg',
+    'jpeg',
     'mov',
     'mp4',
     'pdf',
