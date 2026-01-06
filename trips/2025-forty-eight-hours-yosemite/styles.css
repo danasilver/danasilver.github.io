@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #efe5da;
+}
+
+header, main, footer {
+  max-width: 800px;
+  width: auto;
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 50px;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+header h4 {
+  font-style: italic;
+}
+
+main img {
+  max-width: 800px;
+  display: block;
+}
+
+main p {
+  line-height: 1.5;
+}
+
+main b {
+  font-weight: 700;
+}
+
+main figure {
+  margin: 20px 0;
+}
+
+main figure .side-by-side {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+main figure .side-by-side img {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+  height: auto;
+}
+
+/* single image should take the full width */
+main figure .side-by-side img:only-child {
+  flex-basis: 100%;
+}
+
+main figure figcaption {
+  font-style: italic;
+}
+
+@media screen and (max-width: 800px) {
+  header, main, footer {
+    margin: 0 auto;
+    width: 600px;
+  }
+
+  main img {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header, main, footer {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  main img {
+    width: 400px;
+  }
+}
+
+footer {
+  color: #676767;
+}
