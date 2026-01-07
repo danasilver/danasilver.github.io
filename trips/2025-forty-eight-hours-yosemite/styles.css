@@ -24,7 +24,8 @@ header {
 }
 
 footer {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  color: #676767;
 }
 
 h1 {
@@ -75,6 +76,12 @@ main figure .side-by-side img:only-child {
   flex-basis: 100%;
 }
 
+main figure .stacked-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 main figure figcaption {
   font-style: italic;
 }
@@ -96,11 +103,26 @@ main figure figcaption {
     width: 400px;
   }
 
+  /* Pad text on small screens but keep images full width. */
+  header, main p, footer {
+    padding: 0 5px;
+  }
+
   main img {
+    max-width: 100%;
     width: 400px;
   }
-}
 
-footer {
-  color: #676767;
+  main figure .side-by-side {
+    gap: 10px;
+  }
+
+  main figure .side-by-side img {
+    flex: 0 0 calc(50% - 5px);
+    max-width: calc(50% - 5px);
+  }
+
+  main figure .stacked-images {
+    gap: 10px;
+  }
 }
