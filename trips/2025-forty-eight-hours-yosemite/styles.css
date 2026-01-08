@@ -101,11 +101,12 @@ main figure figcaption {
   header, main, footer {
     margin: 0 auto;
     width: 400px;
+    max-width: 100%;
   }
 
   /* Pad text on small screens but keep images full width. */
   header, main p, footer {
-    padding: 0 5px;
+    padding: 0 10px;
   }
 
   main img {
